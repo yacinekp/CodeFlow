@@ -1,0 +1,1037 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/f">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:id="@+id/tvUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="serif"
+            android:textStyle="bold|italic"
+            />
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log out"
+            android:textAllCaps="false"
+            android:backgroundTint="#F44336"
+            android:textColor="#FFFFFF"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="serif"
+            android:textStyle="italic"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvChooseLesson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose a course or a quiz:"
+        android:textSize="25dp"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="serif"
+        android:textStyle="italic"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="8dp">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="2"
+            android:layout_marginBottom="10dp">
+<!--
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/cr_1_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Introduction to Algorithms"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#607D8B"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+                <Button
+                    android:id="@+id/quizz_1_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Quizz 1"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#795548"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/cr_2_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Variables"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#607D8B"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+                <Button
+                    android:id="@+id/quizz_2_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Quizz 2"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#795548"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/cr_3_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Data Types"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#607D8B"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+                <Button
+                    android:id="@+id/quizz_3_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Quizz 3"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#795548"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/cr_4_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Operators"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#607D8B"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+                <Button
+                    android:id="@+id/quizz_4_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Quizz 4"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#795548"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/cr_5_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Input/Output"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#607D8B"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+                <Button
+                    android:id="@+id/quizz_5_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Quizz 5"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#795548"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/cr_6_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="IF / ELSE"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#607D8B"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+                <Button
+                    android:id="@+id/quizz_6_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Quizz 6"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#795548"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/cr_7_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="SWITCH / CASE"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#607D8B"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+                <Button
+                    android:id="@+id/quizz_7_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Quizz 7"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#795548"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/cr_8_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="FOR Loop"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#607D8B"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+                <Button
+                    android:id="@+id/quizz_8_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Quizz 8"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#795548"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/cr_9_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="WHILE Loop"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#607D8B"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+                <Button
+                    android:id="@+id/quizz_9_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Quizz 9"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#795548"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/cr_10_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="REPEAT Loop"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#607D8B"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+                <Button
+                    android:id="@+id/quizz_10_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Quizz 10"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#795548"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/cr_11_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Arrays"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#607D8B"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+                <Button
+                    android:id="@+id/quizz_11_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Quizz 11"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#795548"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/cr_12_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Pointers"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#607D8B"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+                <Button
+                    android:id="@+id/quizz_12_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Quizz 12"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#795548"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/cr_13_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Records"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#607D8B"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+                <Button
+                    android:id="@+id/quizz_13_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Quizz 13"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#795548"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/cr_14_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Lists"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#607D8B"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+                <Button
+                    android:id="@+id/quizz_14_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Quizz 14"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#795548"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/cr_15_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Subprograms"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#607D8B"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+                <Button
+                    android:id="@+id/quizz_15_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Quizz 15"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#795548"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/cr_16_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Problem-Solving"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#607D8B"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+                <Button
+                    android:id="@+id/quizz_16_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Quizz 16"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#795548"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/cr_17_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Exercises"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#607D8B"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+                <Button
+                    android:id="@+id/quizz_17_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Quizz 17"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#795548"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/cr_18_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sorting"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#607D8B"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+                <Button
+                    android:id="@+id/quizz_18_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Quizz 18"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#795548"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+            </TableRow>
+-->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/cr_1_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Introduction to C"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#607D8B"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+                <Button
+                    android:id="@+id/quizz_1_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Quizz 1"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#795548"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/cr_2_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Installing and Using a C Compiler"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#607D8B"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+                <Button
+                    android:id="@+id/quizz_2_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Quizz 2"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#795548"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/cr_3_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Structure of a C Program"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#607D8B"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+                <Button
+                    android:id="@+id/quizz_3_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Quizz 3"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#795548"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/cr_4_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Variables in C"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#607D8B"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+                <Button
+                    android:id="@+id/quizz_4_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Quizz 4"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#795548"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/cr_5_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Data Types in C"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#607D8B"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+                <Button
+                    android:id="@+id/quizz_5_C"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Quizz 5"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#795548"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"/>
+            </TableRow>
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <Button
+                                android:id="@+id/cr_6_C"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Operators in C"
+                                android:textAllCaps="false"
+                                android:backgroundTint="#607D8B"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="serif"
+                                android:textStyle="italic"/>
+                            <Button
+                                android:id="@+id/quizz_6_C"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Quizz 6"
+                                android:textAllCaps="false"
+                                android:backgroundTint="#795548"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="serif"
+                                android:textStyle="italic"/>
+                        </TableRow>
+
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <Button
+                                android:id="@+id/cr_7_C"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Input and Output (printf and scanf)"
+                                android:textAllCaps="false"
+                                android:backgroundTint="#607D8B"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="serif"
+                                android:textStyle="italic"/>
+                            <Button
+                                android:id="@+id/quizz_7_C"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Quizz 7"
+                                android:textAllCaps="false"
+                                android:backgroundTint="#795548"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="serif"
+                                android:textStyle="italic"/>
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <Button
+                                android:id="@+id/cr_8_C"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="IF / ELSE Conditions"
+                                android:textAllCaps="false"
+                                android:backgroundTint="#607D8B"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="serif"
+                                android:textStyle="italic"/>
+                            <Button
+                                android:id="@+id/quizz_8_C"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Quizz 8"
+                                android:textAllCaps="false"
+                                android:backgroundTint="#795548"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="serif"
+                                android:textStyle="italic"/>
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <Button
+                                android:id="@+id/cr_9_C"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="SWITCH / CASE"
+                                android:textAllCaps="false"
+                                android:backgroundTint="#607D8B"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="serif"
+                                android:textStyle="italic"/>
+                            <Button
+                                android:id="@+id/quizz_9_C"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Quizz 9"
+                                android:textAllCaps="false"
+                                android:backgroundTint="#795548"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="serif"
+                                android:textStyle="italic"/>
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <Button
+                                android:id="@+id/cr_10_C"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="FOR Loop"
+                                android:textAllCaps="false"
+                                android:backgroundTint="#607D8B"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="serif"
+                                android:textStyle="italic"/>
+                            <Button
+                                android:id="@+id/quizz_10_C"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Quizz 10"
+                                android:textAllCaps="false"
+                                android:backgroundTint="#795548"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="serif"
+                                android:textStyle="italic"/>
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <Button
+                                android:id="@+id/cr_11_C"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="WHILE Loop"
+                                android:textAllCaps="false"
+                                android:backgroundTint="#607D8B"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="serif"
+                                android:textStyle="italic"/>
+                            <Button
+                                android:id="@+id/quizz_11_C"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Quizz 11"
+                                android:textAllCaps="false"
+                                android:backgroundTint="#795548"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="serif"
+                                android:textStyle="italic"/>
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <Button
+                                android:id="@+id/cr_12_C"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="DO…WHILE Loop"
+                                android:textAllCaps="false"
+                                android:backgroundTint="#607D8B"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="serif"
+                                android:textStyle="italic"/>
+                            <Button
+                                android:id="@+id/quizz_12_C"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Quizz 12"
+                                android:textAllCaps="false"
+                                android:backgroundTint="#795548"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="serif"
+                                android:textStyle="italic"/>
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <Button
+                                android:id="@+id/cr_13_C"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Arrays (Tableaux)"
+                                android:textAllCaps="false"
+                                android:backgroundTint="#607D8B"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="serif"
+                                android:textStyle="italic"/>
+                            <Button
+                                android:id="@+id/quizz_13_C"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Quizz 13"
+                                android:textAllCaps="false"
+                                android:backgroundTint="#795548"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="serif"
+                                android:textStyle="italic"/>
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <Button
+                                android:id="@+id/cr_14_C"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Introduction to Pointers"
+                                android:textAllCaps="false"
+                                android:backgroundTint="#607D8B"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="serif"
+                                android:textStyle="italic"/>
+                            <Button
+                                android:id="@+id/quizz_14_C"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Quizz 14"
+                                android:textAllCaps="false"
+                                android:backgroundTint="#795548"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="serif"
+                                android:textStyle="italic"/>
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <Button
+                                android:id="@+id/cr_15_C"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Structures (struct)"
+                                android:textAllCaps="false"
+                                android:backgroundTint="#607D8B"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="serif"
+                                android:textStyle="italic"/>
+                            <Button
+                                android:id="@+id/quizz_15_C"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Quizz 15"
+                                android:textAllCaps="false"
+                                android:backgroundTint="#795548"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="serif"
+                                android:textStyle="italic"/>
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <Button
+                                android:id="@+id/cr_16_C"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Linked Lists"
+                                android:textAllCaps="false"
+                                android:backgroundTint="#607D8B"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="serif"
+                                android:textStyle="italic"/>
+                            <Button
+                                android:id="@+id/quizz_16_C"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Quizz 16"
+                                android:textAllCaps="false"
+                                android:backgroundTint="#795548"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="serif"
+                                android:textStyle="italic"/>
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <Button
+                                android:id="@+id/cr_17_C"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Functions and Procedures"
+                                android:textAllCaps="false"
+                                android:backgroundTint="#607D8B"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="serif"
+                                android:textStyle="italic"/>
+                            <Button
+                                android:id="@+id/quizz_17_C"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Quizz 17"
+                                android:textAllCaps="false"
+                                android:backgroundTint="#795548"
+                                android:textColor="#FFFFFF"
+                                android:fontFamily="serif"
+                                android:textStyle="italic"/>
+                        </TableRow>
+            <!--
+            -->
+        </TableLayout>
+
+    </ScrollView>>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/btnGoToAlgo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Algorithmic"
+            android:textAllCaps="false"
+            android:backgroundTint="#9E9E9E"
+            android:textColor="#FFFFFF"
+            android:layout_alignParentStart="true"
+            android:fontFamily="serif"
+            android:textStyle="italic"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>
