@@ -2,23 +2,49 @@ package com.example.projetm2;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class what_to_do extends AppCompatActivity {
+
     private RecyclerView recyclerView;
     private CourseAdapter adapter;
     private List<CourseItem> courseList;
+
+    SessionManager session;
+    TextView tvUsername;
+    Button btnLogout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_what_to_do_recycler);
+
+        // Session
+        session = new SessionManager(this);
+        if (!session.isLoggedIn()) {
+            startActivity(new Intent(this, log_in.class));
+            finish();
+            return;
+        }
+
+        // UI
+        tvUsername = findViewById(R.id.tvUsername);
+        btnLogout = findViewById(R.id.btnLogout);
+
+        tvUsername.setText(session.getUsername());
+        btnLogout.setOnClickListener(v -> {
+            session.logout();
+            startActivity(new Intent(what_to_do.this, log_in.class));
+            finish();
+        });
 
         recyclerView = findViewById(R.id.recyclerViewCourses);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -30,12 +56,8 @@ public class what_to_do extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
         Button goToC = findViewById(R.id.btnGoToC);
-        goToC.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(what_to_do.this, what_to_do_C.class);
-                startActivity(intent);
-            }
+        goToC.setOnClickListener(v -> {
+            startActivity(new Intent(what_to_do.this, what_to_do_C.class));
         });
     }
 

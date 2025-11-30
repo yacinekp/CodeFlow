@@ -1,7 +1,15 @@
 [
     {
-        "merged": "com.example.projetm2.app-debug-34:/layout_activity_quizz.xml.flat",
-        "source": "com.example.projetm2.app-main-36:/layout/activity_quizz.xml"
+        "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/layout_activity_what_to_do_c_recycler.xml.flat",
+        "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/layout/activity_what_to_do_c_recycler.xml"
+    },
+    {
+        "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/layout_activity_main.xml.flat",
+        "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/layout_activity_introduction.xml.flat",
+        "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/layout/activity_introduction.xml"
     },
     {
         "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/layout_activity_choose.xml.flat",
@@ -28,104 +36,16 @@
         "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.example.projetm2.app-debug-34:/layout_activity_what_to_do_c_recycler.xml.flat",
-        "source": "com.example.projetm2.app-main-36:/layout/activity_what_to_do_c_recycler.xml"
-    },
-    {
         "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/drawable_fn.png.flat",
         "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/drawable/fn.png"
-    },
-    {
-        "merged": "com.example.projetm2.app-debug-34:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.projetm2.app-main-36:/mipmap-xhdpi/ic_launcher_round.webp"
-    },
-    {
-        "merged": "com.example.projetm2.app-debug-34:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
-        "source": "com.example.projetm2.app-main-36:/mipmap-hdpi/ic_launcher_foreground.webp"
-    },
-    {
-        "merged": "com.example.projetm2.app-debug-34:/layout_activity_what_to_do_recycler.xml.flat",
-        "source": "com.example.projetm2.app-main-36:/layout/activity_what_to_do_recycler.xml"
-    },
-    {
-        "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/mipmap-mdpi/ic_launcher_round.webp"
-    },
-    {
-        "merged": "com.example.projetm2.app-debug-34:/mipmap-mdpi_ic_launcher_foreground.webp.flat",
-        "source": "com.example.projetm2.app-main-36:/mipmap-mdpi/ic_launcher_foreground.webp"
-    },
-    {
-        "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/layout_activity_creat_account.xml.flat",
-        "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/layout/activity_creat_account.xml"
-    },
-    {
-        "merged": "com.example.projetm2.app-debug-34:/layout_activity_log_in.xml.flat",
-        "source": "com.example.projetm2.app-main-36:/layout/activity_log_in.xml"
-    },
-    {
-        "merged": "com.example.projetm2.app-debug-34:/mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
-        "source": "com.example.projetm2.app-main-36:/mipmap-xxhdpi/ic_launcher_foreground.webp"
-    },
-    {
-        "merged": "com.example.projetm2.app-debug-34:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.example.projetm2.app-main-36:/drawable/ic_launcher_background.xml"
-    },
-    {
-        "merged": "com.example.projetm2.app-debug-34:/layout_activity_introduction.xml.flat",
-        "source": "com.example.projetm2.app-main-36:/layout/activity_introduction.xml"
-    },
-    {
-        "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/mipmap-xhdpi/ic_launcher_round.webp"
-    },
-    {
-        "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/drawable_ic_launcher_background.xml.flat",
-        "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/drawable/ic_launcher_background.xml"
-    },
-    {
-        "merged": "com.example.projetm2.app-debug-34:/layout_activity_cours.xml.flat",
-        "source": "com.example.projetm2.app-main-36:/layout/activity_cours.xml"
-    },
-    {
-        "merged": "com.example.projetm2.app-debug-34:/xml_backup_rules.xml.flat",
-        "source": "com.example.projetm2.app-main-36:/xml/backup_rules.xml"
-    },
-    {
-        "merged": "com.example.projetm2.app-debug-34:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "com.example.projetm2.app-main-36:/mipmap-xxhdpi/ic_launcher.webp"
-    },
-    {
-        "merged": "com.example.projetm2.app-debug-34:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
-        "source": "com.example.projetm2.app-main-36:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
-    },
-    {
-        "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/mipmap-hdpi/ic_launcher.webp"
-    },
-    {
-        "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/layout_activity_main.xml.flat",
-        "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/layout/activity_main.xml"
-    },
-    {
-        "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/layout_activity_introduction.xml.flat",
-        "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/layout/activity_introduction.xml"
-    },
-    {
-        "merged": "com.example.projetm2.app-debug-34:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.projetm2.app-main-36:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
         "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/mipmap-xxhdpi_ic_launcher.webp.flat",
         "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.example.projetm2.app-debug-34:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.projetm2.app-main-36:/mipmap-mdpi/ic_launcher_round.webp"
-    },
-    {
-        "merged": "com.example.projetm2.app-debug-34:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.example.projetm2.app-main-36:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/mipmap-xhdpi_ic_launcher_foreground.webp.flat",
+        "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/mipmap-xhdpi/ic_launcher_foreground.webp"
     },
     {
         "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/mipmap-mdpi_ic_launcher.webp.flat",
@@ -136,16 +56,28 @@
         "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/layout/activity_cours.xml"
     },
     {
-        "merged": "com.example.projetm2.app-debug-34:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "com.example.projetm2.app-main-36:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/mipmap-hdpi/ic_launcher_foreground.webp"
     },
     {
-        "merged": "com.example.projetm2.app-debug-34:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "com.example.projetm2.app-main-36:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/layout_activity_what_to_do_recycler.xml.flat",
+        "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/layout/activity_what_to_do_recycler.xml"
+    },
+    {
+        "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/mipmap-mdpi_ic_launcher_foreground.webp.flat",
+        "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/mipmap-mdpi/ic_launcher_foreground.webp"
     },
     {
         "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/xml_data_extraction_rules.xml.flat",
         "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/layout_activity_creat_account.xml.flat",
+        "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/layout/activity_creat_account.xml"
     },
     {
         "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/layout_activity_what_to_do_c.xml.flat",
@@ -156,24 +88,16 @@
         "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/layout/activity_what_to_do.xml"
     },
     {
-        "merged": "com.example.projetm2.app-debug-34:/layout_activity_choose.xml.flat",
-        "source": "com.example.projetm2.app-main-36:/layout/activity_choose.xml"
-    },
-    {
-        "merged": "com.example.projetm2.app-debug-34:/mipmap-xhdpi_ic_launcher_foreground.webp.flat",
-        "source": "com.example.projetm2.app-main-36:/mipmap-xhdpi/ic_launcher_foreground.webp"
+        "merged": "com.example.projetm2.app-debug-34:/layout_activity_what_to_do.xml.flat",
+        "source": "com.example.projetm2.app-main-36:/layout/activity_what_to_do.xml"
     },
     {
         "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.projetm2.app-debug-34:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.projetm2.app-main-36:/mipmap-hdpi/ic_launcher_round.webp"
-    },
-    {
-        "merged": "com.example.projetm2.app-debug-34:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.projetm2.app-main-36:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
     },
     {
         "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/drawable_ic_launcher_foreground.xml.flat",
@@ -184,36 +108,36 @@
         "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.example.projetm2.app-debug-34:/layout_activity_creat_account.xml.flat",
-        "source": "com.example.projetm2.app-main-36:/layout/activity_creat_account.xml"
+        "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.projetm2.app-debug-34:/layout_item_course_quiz.xml.flat",
-        "source": "com.example.projetm2.app-main-36:/layout/item_course_quiz.xml"
+        "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/drawable_ic_launcher_background.xml.flat",
+        "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "com.example.projetm2.app-debug-34:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.example.projetm2.app-main-36:/mipmap-anydpi-v26/ic_launcher.xml"
-    },
-    {
-        "merged": "com.example.projetm2.app-debug-34:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "com.example.projetm2.app-main-36:/mipmap-mdpi/ic_launcher.webp"
-    },
-    {
-        "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/mipmap-xxhdpi/ic_launcher_foreground.webp"
     },
     {
         "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/layout_activity_quizz.xml.flat",
         "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/layout/activity_quizz.xml"
     },
     {
+        "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
         "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
         "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.projetm2.app-debug-34:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "com.example.projetm2.app-main-36:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/layout_item_course_quiz.xml.flat",
+        "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/layout/item_course_quiz.xml"
     },
     {
         "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/drawable_f.png.flat",

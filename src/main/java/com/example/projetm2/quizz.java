@@ -1,30 +1,54 @@
 package com.example.projetm2;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import android.widget.RadioGroup;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
 
 public class quizz extends AppCompatActivity {
-    Button quizzprv,btnSubmit;
+
+    Button quizzprv, btnSubmit, btnLogout;
     RadioGroup radioGroup;
     RadioButton rb1, rb2, rb3, rb4;
-    TextView tvQuestion, tvBottomNote,comment;
+    TextView tvQuestion, tvBottomNote, comment, tvUsername;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quizz);
+
+        // SESSION UI
+        tvUsername = findViewById(R.id.tvUsername);
+        btnLogout = findViewById(R.id.btnLogout);
+
+        // Load session
+        SharedPreferences prefs = getSharedPreferences("session", MODE_PRIVATE);
+        String username = prefs.getString("username", null);
+
+        if (username == null) {
+            Intent intent = new Intent(quizz.this, log_in.class);
+            startActivity(intent);
+            finish();
+            return;
+        }
+
+        tvUsername.setText(username);
+
+        btnLogout.setOnClickListener(v -> {
+            prefs.edit().clear().apply();
+            Intent intent = new Intent(quizz.this, log_in.class);
+            startActivity(intent);
+            finish();
+        });
+
+        // QUIZ UI
         quizzprv = findViewById(R.id.btnquizzprevious);
         comment = findViewById(R.id.BottomNote);
 
@@ -37,6 +61,7 @@ public class quizz extends AppCompatActivity {
         rb4 = findViewById(R.id.rbChoice4);
         btnSubmit = findViewById(R.id.btnSubmitsQuizz);
 
+        // Load quiz data from intent
         String question = getIntent().getStringExtra("question");
         String p1 = getIntent().getStringExtra("p1");
         String p2 = getIntent().getStringExtra("p2");
@@ -55,58 +80,54 @@ public class quizz extends AppCompatActivity {
         rb3.setText(p3);
         rb4.setText(p4);
 
+        // Submit logic
+        btnSubmit.setOnClickListener(v -> {
+            int selectedId = radioGroup.getCheckedRadioButtonId();
 
-        btnSubmit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int selectedId = radioGroup.getCheckedRadioButtonId();
+            if (selectedId == -1) {
+                tvBottomNote.setText("Please select an answer!");
+                return;
+            }
 
-                if (selectedId == -1) {
-                    tvBottomNote.setText("Please select an answer!");
-                    return;
-                }
+            RadioButton selected = findViewById(selectedId);
+            String userAnswer = selected.getText().toString();
 
-                RadioButton selected = findViewById(selectedId);
-                String userAnswer = selected.getText().toString();
+            rb1.setBackgroundColor(Color.TRANSPARENT);
+            rb2.setBackgroundColor(Color.TRANSPARENT);
+            rb3.setBackgroundColor(Color.TRANSPARENT);
+            rb4.setBackgroundColor(Color.TRANSPARENT);
 
-                rb1.setBackgroundColor(Color.TRANSPARENT);
-                rb2.setBackgroundColor(Color.TRANSPARENT);
-                rb3.setBackgroundColor(Color.TRANSPARENT);
-                rb4.setBackgroundColor(Color.TRANSPARENT);
+            if (userAnswer.equals(correct)) {
+                tvBottomNote.setText("correct");
+                tvBottomNote.setTextColor(Color.WHITE);
+                comment.setBackgroundColor(Color.GREEN);
+                selected.setBackgroundColor(Color.GREEN);
 
-                if (userAnswer.equals(correct)) {
-                    tvBottomNote.setText("correct");
-                    tvBottomNote.setTextColor(Color.WHITE);
-                    comment.setBackgroundColor(Color.GREEN);
-                    selected.setBackgroundColor(Color.GREEN);
+            } else {
 
-                } else {
-                    if (selected == rb1) tvBottomNote.setText(c1);
-                    if (selected == rb2) tvBottomNote.setText(c2);
-                    if (selected == rb3) tvBottomNote.setText(c3);
-                    if (selected == rb4) tvBottomNote.setText(c4);
-                    tvBottomNote.setTextColor(Color.WHITE);
-                    comment.setBackgroundColor(Color.RED);
-                    selected.setBackgroundColor(Color.RED);
-                }
+                if (selected == rb1) tvBottomNote.setText(c1);
+                if (selected == rb2) tvBottomNote.setText(c2);
+                if (selected == rb3) tvBottomNote.setText(c3);
+                if (selected == rb4) tvBottomNote.setText(c4);
+
+                tvBottomNote.setTextColor(Color.WHITE);
+                comment.setBackgroundColor(Color.RED);
+                selected.setBackgroundColor(Color.RED);
             }
         });
 
+        // Previous button
+        quizzprv.setOnClickListener(v -> {
+            rb1.setBackgroundColor(Color.TRANSPARENT);
+            rb2.setBackgroundColor(Color.TRANSPARENT);
+            rb3.setBackgroundColor(Color.TRANSPARENT);
+            rb4.setBackgroundColor(Color.TRANSPARENT);
+            radioGroup.clearCheck();
+            tvBottomNote.setText("");
+            comment.setBackgroundColor(Color.TRANSPARENT);
 
-        quizzprv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                rb1.setBackgroundColor(Color.TRANSPARENT);
-                rb2.setBackgroundColor(Color.TRANSPARENT);
-                rb3.setBackgroundColor(Color.TRANSPARENT);
-                rb4.setBackgroundColor(Color.TRANSPARENT);
-                radioGroup.clearCheck();
-                tvBottomNote.setText("");
-                comment.setBackgroundColor(Color.TRANSPARENT);
-                Intent intent = new Intent(quizz.this, what_to_do.class);
-                startActivity(intent);
-            }
+            Intent intent = new Intent(quizz.this, what_to_do.class);
+            startActivity(intent);
         });
-
     }
 }
