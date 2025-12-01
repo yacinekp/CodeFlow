@@ -8,171 +8,182 @@
 8        android:minSdkVersion="25"
 9        android:targetSdkVersion="36" />
 10
-11    <permission
-11-->[androidx.core:core:1.13.0] /home/schad/.gradle/caches/8.13/transforms/e22dd6e248c00a510dec0d7860dcc972/transformed/core-1.13.0/AndroidManifest.xml:22:5-24:47
-12        android:name="com.example.projetm2.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-12-->[androidx.core:core:1.13.0] /home/schad/.gradle/caches/8.13/transforms/e22dd6e248c00a510dec0d7860dcc972/transformed/core-1.13.0/AndroidManifest.xml:23:9-81
-13        android:protectionLevel="signature" />
-13-->[androidx.core:core:1.13.0] /home/schad/.gradle/caches/8.13/transforms/e22dd6e248c00a510dec0d7860dcc972/transformed/core-1.13.0/AndroidManifest.xml:24:9-44
-14
-15    <uses-permission android:name="com.example.projetm2.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-15-->[androidx.core:core:1.13.0] /home/schad/.gradle/caches/8.13/transforms/e22dd6e248c00a510dec0d7860dcc972/transformed/core-1.13.0/AndroidManifest.xml:26:5-97
-15-->[androidx.core:core:1.13.0] /home/schad/.gradle/caches/8.13/transforms/e22dd6e248c00a510dec0d7860dcc972/transformed/core-1.13.0/AndroidManifest.xml:26:22-94
+11    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+11-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:4:1-73
+11-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:4:18-70
+12
+13    <permission
+13-->[androidx.core:core:1.13.0] /home/schad/.gradle/caches/8.13/transforms/e22dd6e248c00a510dec0d7860dcc972/transformed/core-1.13.0/AndroidManifest.xml:22:5-24:47
+14        android:name="com.example.projetm2.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+14-->[androidx.core:core:1.13.0] /home/schad/.gradle/caches/8.13/transforms/e22dd6e248c00a510dec0d7860dcc972/transformed/core-1.13.0/AndroidManifest.xml:23:9-81
+15        android:protectionLevel="signature" />
+15-->[androidx.core:core:1.13.0] /home/schad/.gradle/caches/8.13/transforms/e22dd6e248c00a510dec0d7860dcc972/transformed/core-1.13.0/AndroidManifest.xml:24:9-44
 16
-17    <application
-17-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:5:5-47:19
-18        android:allowBackup="true"
-18-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:6:9-35
-19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-19-->[androidx.core:core:1.13.0] /home/schad/.gradle/caches/8.13/transforms/e22dd6e248c00a510dec0d7860dcc972/transformed/core-1.13.0/AndroidManifest.xml:28:18-86
-20        android:dataExtractionRules="@xml/data_extraction_rules"
-20-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:7:9-65
-21        android:debuggable="true"
-22        android:extractNativeLibs="false"
-23        android:fullBackupContent="@xml/backup_rules"
-23-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:8:9-54
-24        android:icon="@mipmap/ic_launcher"
-24-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:9:9-43
-25        android:label="@string/app_name"
-25-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:10:9-41
-26        android:roundIcon="@mipmap/ic_launcher_round"
-26-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:11:9-54
-27        android:supportsRtl="true"
-27-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:12:9-35
-28        android:testOnly="true"
-29        android:theme="@style/Theme.ProjetM2" >
-29-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:13:9-46
-30        <activity
-30-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:14:9-16:40
-31            android:name="com.example.projetm2.what_to_do_C"
-31-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:15:13-41
-32            android:exported="false" />
-32-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:16:13-37
-33        <activity
-33-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:17:9-19:40
-34            android:name="com.example.projetm2.quizz"
-34-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:18:13-34
-35            android:exported="false" />
-35-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:19:13-37
-36        <activity
-36-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:20:9-22:40
-37            android:name="com.example.projetm2.cours"
-37-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:21:13-34
-38            android:exported="false" />
-38-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:22:13-37
-39        <activity
-39-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:23:9-25:40
-40            android:name="com.example.projetm2.what_to_do"
-40-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:24:13-39
-41            android:exported="false" />
-41-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:25:13-37
-42        <activity
-42-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:26:9-28:40
-43            android:name="com.example.projetm2.choose"
-43-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:27:13-35
-44            android:exported="false" />
-44-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:28:13-37
-45        <activity
-45-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:29:9-31:40
-46            android:name="com.example.projetm2.introduction"
-46-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:30:13-41
-47            android:exported="false" />
-47-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:31:13-37
-48        <activity
-48-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:32:9-34:40
-49            android:name="com.example.projetm2.creat_account"
-49-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:33:13-42
-50            android:exported="false" />
-50-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:34:13-37
-51        <activity
-51-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:35:9-37:40
-52            android:name="com.example.projetm2.log_in"
-52-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:36:13-35
-53            android:exported="false" />
-53-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:37:13-37
-54        <activity
-54-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:38:9-46:20
-55            android:name="com.example.projetm2.MainActivity"
-55-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:39:13-41
-56            android:exported="true" >
-56-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:40:13-36
-57            <intent-filter>
-57-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:41:13-45:29
-58                <action android:name="android.intent.action.MAIN" />
-58-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:42:17-69
-58-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:42:25-66
-59
-60                <category android:name="android.intent.category.LAUNCHER" />
-60-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:44:17-77
-60-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:44:27-74
-61            </intent-filter>
-62        </activity>
-63
-64        <provider
-64-->[androidx.emoji2:emoji2:1.3.0] /home/schad/.gradle/caches/8.13/transforms/bb4af8c90d3cf4c94c7f523287922277/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
-65            android:name="androidx.startup.InitializationProvider"
-65-->[androidx.emoji2:emoji2:1.3.0] /home/schad/.gradle/caches/8.13/transforms/bb4af8c90d3cf4c94c7f523287922277/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
-66            android:authorities="com.example.projetm2.androidx-startup"
-66-->[androidx.emoji2:emoji2:1.3.0] /home/schad/.gradle/caches/8.13/transforms/bb4af8c90d3cf4c94c7f523287922277/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
-67            android:exported="false" >
-67-->[androidx.emoji2:emoji2:1.3.0] /home/schad/.gradle/caches/8.13/transforms/bb4af8c90d3cf4c94c7f523287922277/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
-68            <meta-data
-68-->[androidx.emoji2:emoji2:1.3.0] /home/schad/.gradle/caches/8.13/transforms/bb4af8c90d3cf4c94c7f523287922277/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
-69                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-69-->[androidx.emoji2:emoji2:1.3.0] /home/schad/.gradle/caches/8.13/transforms/bb4af8c90d3cf4c94c7f523287922277/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
-70                android:value="androidx.startup" />
-70-->[androidx.emoji2:emoji2:1.3.0] /home/schad/.gradle/caches/8.13/transforms/bb4af8c90d3cf4c94c7f523287922277/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
-71            <meta-data
-71-->[androidx.lifecycle:lifecycle-process:2.6.2] /home/schad/.gradle/caches/8.13/transforms/95a53fd49f4e841b95a35aee25344004/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
-72                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-72-->[androidx.lifecycle:lifecycle-process:2.6.2] /home/schad/.gradle/caches/8.13/transforms/95a53fd49f4e841b95a35aee25344004/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
-73                android:value="androidx.startup" />
-73-->[androidx.lifecycle:lifecycle-process:2.6.2] /home/schad/.gradle/caches/8.13/transforms/95a53fd49f4e841b95a35aee25344004/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+17    <uses-permission android:name="com.example.projetm2.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+17-->[androidx.core:core:1.13.0] /home/schad/.gradle/caches/8.13/transforms/e22dd6e248c00a510dec0d7860dcc972/transformed/core-1.13.0/AndroidManifest.xml:26:5-97
+17-->[androidx.core:core:1.13.0] /home/schad/.gradle/caches/8.13/transforms/e22dd6e248c00a510dec0d7860dcc972/transformed/core-1.13.0/AndroidManifest.xml:26:22-94
+18
+19    <application
+19-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:7:5-54:19
+20        android:allowBackup="true"
+20-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:8:9-35
+21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+21-->[androidx.core:core:1.13.0] /home/schad/.gradle/caches/8.13/transforms/e22dd6e248c00a510dec0d7860dcc972/transformed/core-1.13.0/AndroidManifest.xml:28:18-86
+22        android:dataExtractionRules="@xml/data_extraction_rules"
+22-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:9:9-65
+23        android:debuggable="true"
+24        android:extractNativeLibs="false"
+25        android:fullBackupContent="@xml/backup_rules"
+25-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:10:9-54
+26        android:icon="@mipmap/ic_launcher"
+26-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:11:9-43
+27        android:label="@string/app_name"
+27-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:12:9-41
+28        android:roundIcon="@mipmap/ic_launcher_round"
+28-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:13:9-54
+29        android:supportsRtl="true"
+29-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:14:9-35
+30        android:testOnly="true"
+31        android:theme="@style/Theme.ProjetM2" >
+31-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:15:9-46
+32        <activity
+32-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:16:9-18:40
+33            android:name="com.example.projetm2.what_to_do_C"
+33-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:17:13-41
+34            android:exported="false" />
+34-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:18:13-37
+35        <activity
+35-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:19:9-21:40
+36            android:name="com.example.projetm2.quizz"
+36-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:20:13-34
+37            android:exported="false" />
+37-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:21:13-37
+38        <activity
+38-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:22:9-24:40
+39            android:name="com.example.projetm2.cours"
+39-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:23:13-34
+40            android:exported="false" />
+40-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:24:13-37
+41        <activity
+41-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:25:9-27:40
+42            android:name="com.example.projetm2.what_to_do"
+42-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:26:13-39
+43            android:exported="false" />
+43-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:27:13-37
+44        <activity
+44-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:28:9-30:40
+45            android:name="com.example.projetm2.choose"
+45-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:29:13-35
+46            android:exported="false" />
+46-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:30:13-37
+47        <activity
+47-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:31:9-33:40
+48            android:name="com.example.projetm2.introduction"
+48-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:32:13-41
+49            android:exported="false" />
+49-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:33:13-37
+50        <activity
+50-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:34:9-36:40
+51            android:name="com.example.projetm2.creat_account"
+51-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:35:13-42
+52            android:exported="false" />
+52-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:36:13-37
+53        <activity
+53-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:38:9-40:39
+54            android:name="com.example.projetm2.forgot_password"
+54-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:39:13-44
+55            android:exported="false" />
+55-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:40:13-37
+56        <activity
+56-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:42:9-50:20
+57            android:name="com.example.projetm2.log_in"
+57-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:43:13-35
+58            android:exported="true" >
+58-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:44:13-36
+59            <intent-filter>
+59-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:45:13-49:29
+60                <action android:name="android.intent.action.MAIN" />
+60-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:46:17-69
+60-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:46:25-66
+61
+62                <category android:name="android.intent.category.LAUNCHER" />
+62-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:48:17-77
+62-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:48:27-74
+63            </intent-filter>
+64        </activity>
+65
+66        <service
+66-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:51:9-53:40
+67            android:name="com.example.projetm2.timetrackservice"
+67-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:52:13-45
+68            android:exported="false" />
+68-->/home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:53:13-37
+69
+70        <provider
+70-->[androidx.emoji2:emoji2:1.3.0] /home/schad/.gradle/caches/8.13/transforms/bb4af8c90d3cf4c94c7f523287922277/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+71            android:name="androidx.startup.InitializationProvider"
+71-->[androidx.emoji2:emoji2:1.3.0] /home/schad/.gradle/caches/8.13/transforms/bb4af8c90d3cf4c94c7f523287922277/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
+72            android:authorities="com.example.projetm2.androidx-startup"
+72-->[androidx.emoji2:emoji2:1.3.0] /home/schad/.gradle/caches/8.13/transforms/bb4af8c90d3cf4c94c7f523287922277/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
+73            android:exported="false" >
+73-->[androidx.emoji2:emoji2:1.3.0] /home/schad/.gradle/caches/8.13/transforms/bb4af8c90d3cf4c94c7f523287922277/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
 74            <meta-data
-74-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:29:13-31:52
-75                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-75-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:30:17-85
+74-->[androidx.emoji2:emoji2:1.3.0] /home/schad/.gradle/caches/8.13/transforms/bb4af8c90d3cf4c94c7f523287922277/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+75                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+75-->[androidx.emoji2:emoji2:1.3.0] /home/schad/.gradle/caches/8.13/transforms/bb4af8c90d3cf4c94c7f523287922277/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
 76                android:value="androidx.startup" />
-76-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:31:17-49
-77        </provider>
-78
-79        <receiver
-79-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:34:9-52:20
-80            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-80-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:35:13-76
-81            android:directBootAware="false"
-81-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:36:13-44
-82            android:enabled="true"
-82-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:37:13-35
-83            android:exported="true"
-83-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:38:13-36
-84            android:permission="android.permission.DUMP" >
-84-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:39:13-57
-85            <intent-filter>
-85-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:40:13-42:29
-86                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-86-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:17-91
-86-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:25-88
-87            </intent-filter>
-88            <intent-filter>
-88-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:43:13-45:29
-89                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-89-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:17-85
-89-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:25-82
-90            </intent-filter>
+76-->[androidx.emoji2:emoji2:1.3.0] /home/schad/.gradle/caches/8.13/transforms/bb4af8c90d3cf4c94c7f523287922277/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+77            <meta-data
+77-->[androidx.lifecycle:lifecycle-process:2.6.2] /home/schad/.gradle/caches/8.13/transforms/95a53fd49f4e841b95a35aee25344004/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
+78                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+78-->[androidx.lifecycle:lifecycle-process:2.6.2] /home/schad/.gradle/caches/8.13/transforms/95a53fd49f4e841b95a35aee25344004/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
+79                android:value="androidx.startup" />
+79-->[androidx.lifecycle:lifecycle-process:2.6.2] /home/schad/.gradle/caches/8.13/transforms/95a53fd49f4e841b95a35aee25344004/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+80            <meta-data
+80-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:29:13-31:52
+81                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+81-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:30:17-85
+82                android:value="androidx.startup" />
+82-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:31:17-49
+83        </provider>
+84
+85        <receiver
+85-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:34:9-52:20
+86            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+86-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:35:13-76
+87            android:directBootAware="false"
+87-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:36:13-44
+88            android:enabled="true"
+88-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:37:13-35
+89            android:exported="true"
+89-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:38:13-36
+90            android:permission="android.permission.DUMP" >
+90-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:39:13-57
 91            <intent-filter>
-91-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:46:13-48:29
-92                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-92-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:17-88
-92-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:25-85
+91-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:40:13-42:29
+92                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+92-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:17-91
+92-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:25-88
 93            </intent-filter>
 94            <intent-filter>
-94-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:49:13-51:29
-95                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-95-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:17-95
-95-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:25-92
+94-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:43:13-45:29
+95                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+95-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:17-85
+95-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:25-82
 96            </intent-filter>
-97        </receiver>
-98    </application>
-99
-100</manifest>
+97            <intent-filter>
+97-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:46:13-48:29
+98                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+98-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:17-88
+98-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:25-85
+99            </intent-filter>
+100            <intent-filter>
+100-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:49:13-51:29
+101                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+101-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:17-95
+101-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/schad/.gradle/caches/8.13/transforms/8376609c3bd94dda5e80aead6d23222e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:25-92
+102            </intent-filter>
+103        </receiver>
+104    </application>
+105
+106</manifest>

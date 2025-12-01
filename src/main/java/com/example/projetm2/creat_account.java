@@ -10,9 +10,26 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class creat_account extends AppCompatActivity {
+    private boolean isPasswordStrong(String password) {
+        if (password.length() < 8) return false;
+
+        boolean hasUpper = false;
+        boolean hasDigit = false;
+        boolean hasSpecial = false;
+
+        for (char c : password.toCharArray()) {
+            if (Character.isUpperCase(c)) hasUpper = true;
+            if (Character.isDigit(c)) hasDigit = true;
+            if ("@#$%^&+=!?*/-_".contains(String.valueOf(c))) hasSpecial = true;
+        }
+
+        return hasUpper && hasDigit && hasSpecial;
+    }
+
 
     EditText etUsername, etPassword, etConfirmPassword;
     Button create;
+    Button btnAlreadyHave;
 
     database_Handler db;
 
@@ -28,6 +45,15 @@ public class creat_account extends AppCompatActivity {
         etConfirmPassword = findViewById(R.id.btnCreateAccountConfirmPassword);
 
         create = findViewById(R.id.btnCreate);
+
+        btnAlreadyHave = findViewById(R.id.btnAlreadyHave);
+
+        btnAlreadyHave.setOnClickListener(v -> {
+            // go back to login screen
+            Intent i = new Intent(creat_account.this, log_in.class);
+            startActivity(i);
+            finish(); // optional: close create account so user cannot return with back
+        });
 
         create.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +71,13 @@ public class creat_account extends AppCompatActivity {
 
                 if (!password.equals(confirm)) {
                     Toast.makeText(creat_account.this, "Passwords do not match", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if (!isPasswordStrong(password)) {
+                    Toast.makeText(creat_account.this,
+                            "Password must be at least 8 chars, contain 1 uppercase, 1 digit, and 1 special character.",
+                            Toast.LENGTH_LONG).show();
                     return;
                 }
 

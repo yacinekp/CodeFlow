@@ -158,6 +158,17 @@
             android:layout_alignParentStart="true"
             android:fontFamily="serif"
             android:textStyle="italic"/>
+        <Button
+            android:id="@+id/btnquizznext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:textAllCaps="false"
+            android:backgroundTint="#9E9E9E"
+            android:textColor="#FFFFFF"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="serif"
+            android:textStyle="italic"/>
 
 
     </RelativeLayout>

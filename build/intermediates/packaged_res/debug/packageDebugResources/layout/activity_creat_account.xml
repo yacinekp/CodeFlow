@@ -108,6 +108,17 @@
         android:fontFamily="serif"
         android:textStyle="italic"/>
 
+    <Button
+        android:id="@+id/btnAlreadyHave"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Already have an account? Log in"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        android:backgroundTint="#9E9E9E"
+        android:textColor="#FFFFFF"
+        android:fontFamily="serif"
+        android:textStyle="italic"/>
 
 
 </LinearLayout>

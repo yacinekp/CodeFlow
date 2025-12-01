@@ -76,36 +76,36 @@
         "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/layout_activity_creat_account.xml.flat",
-        "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/layout/activity_creat_account.xml"
-    },
-    {
         "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/layout_activity_what_to_do_c.xml.flat",
         "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/layout/activity_what_to_do_c.xml"
+    },
+    {
+        "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/layout_activity_creat_account.xml.flat",
+        "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/layout/activity_creat_account.xml"
     },
     {
         "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/layout_activity_what_to_do.xml.flat",
         "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/layout/activity_what_to_do.xml"
     },
     {
-        "merged": "com.example.projetm2.app-debug-34:/layout_activity_what_to_do.xml.flat",
-        "source": "com.example.projetm2.app-main-36:/layout/activity_what_to_do.xml"
-    },
-    {
         "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/mipmap-hdpi/ic_launcher_round.webp"
-    },
-    {
-        "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
-        "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
     },
     {
         "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/drawable_ic_launcher_foreground.xml.flat",
         "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/drawable/ic_launcher_foreground.xml"
     },
     {
+        "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
+    },
+    {
         "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.projetm2.app-debug-34:/layout_activity_creat_account.xml.flat",
+        "source": "com.example.projetm2.app-main-36:/layout/activity_creat_account.xml"
     },
     {
         "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/mipmap-xhdpi_ic_launcher_round.webp.flat",
@@ -114,6 +114,10 @@
     {
         "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/drawable_ic_launcher_background.xml.flat",
         "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/layout_activity_forgot_password.xml.flat",
+        "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/layout/activity_forgot_password.xml"
     },
     {
         "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
@@ -128,12 +132,12 @@
         "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/mipmap-hdpi/ic_launcher.webp"
-    },
-    {
         "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
         "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-main-36:/mipmap-hdpi/ic_launcher.webp"
     },
     {
         "merged": "/home/schad/.gradle/daemon/8.13/com.example.projetm2.app-debug-34:/layout_item_course_quiz.xml.flat",

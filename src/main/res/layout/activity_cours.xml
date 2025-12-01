@@ -77,6 +77,17 @@
 
             android:fontFamily="serif"
             android:textStyle="italic"/>
+        <Button
+            android:id="@+id/btncrnext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/white"
+            android:textColor="#800080"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="serif"
+            android:textStyle="italic"/>
 
 
     </RelativeLayout>

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:2:1-49:12
-INJECTED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:2:1-49:12
-INJECTED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:2:1-49:12
-INJECTED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:2:1-49:12
+ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:2:1-56:12
+INJECTED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:2:1-56:12
+INJECTED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:2:1-56:12
+INJECTED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:2:1-56:12
 MERGED from [com.google.android.material:material:1.13.0] /home/schad/.gradle/caches/8.13/transforms/02ddf3f4bb9ca687bc1d0c2c5cb05368/transformed/material-1.13.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] /home/schad/.gradle/caches/8.13/transforms/25fdb7c1de8ca2c3635a448f3d0b2a42/transformed/constraintlayout-2.2.1/AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.appcompat:appcompat-resources:1.7.1] /home/schad/.gradle/caches/8.13/transforms/9a7247009cd972f866749dca3325b2ab/transformed/appcompat-resources-1.7.1/AndroidManifest.xml:2:1-7:12
@@ -53,9 +53,13 @@ MERGED from [androidx.annotation:annotation-experimental:1.4.1] /home/schad/.gra
 		INJECTED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.POST_NOTIFICATIONS
+ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:4:1-73
+	android:name
+		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:4:18-70
 application
-ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:5:5-47:19
-INJECTED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:5:5-47:19
+ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:7:5-54:19
+INJECTED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:7:5-54:19
 MERGED from [com.google.android.material:material:1.13.0] /home/schad/.gradle/caches/8.13/transforms/02ddf3f4bb9ca687bc1d0c2c5cb05368/transformed/material-1.13.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.13.0] /home/schad/.gradle/caches/8.13/transforms/02ddf3f4bb9ca687bc1d0c2c5cb05368/transformed/material-1.13.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] /home/schad/.gradle/caches/8.13/transforms/25fdb7c1de8ca2c3635a448f3d0b2a42/transformed/constraintlayout-2.2.1/AndroidManifest.xml:7:5-20
@@ -77,85 +81,91 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/schad
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.13.0] /home/schad/.gradle/caches/8.13/transforms/e22dd6e248c00a510dec0d7860dcc972/transformed/core-1.13.0/AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:12:9-35
+		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:14:9-35
 	android:label
-		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:10:9-41
+		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:12:9-41
 	android:fullBackupContent
-		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:8:9-54
+		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:10:9-54
 	android:roundIcon
-		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:11:9-54
+		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:13:9-54
 	android:icon
-		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:9:9-43
+		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:11:9-43
 	android:allowBackup
-		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:6:9-35
+		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:8:9-35
 	android:theme
-		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:13:9-46
+		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:15:9-46
 	android:dataExtractionRules
-		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:7:9-65
+		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:9:9-65
 activity#com.example.projetm2.what_to_do_C
-ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:14:9-16:40
+ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:16:9-18:40
 	android:exported
-		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:16:13-37
+		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:18:13-37
 	android:name
-		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:15:13-41
+		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:17:13-41
 activity#com.example.projetm2.quizz
-ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:17:9-19:40
+ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:19:9-21:40
 	android:exported
-		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:19:13-37
+		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:21:13-37
 	android:name
-		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:18:13-34
+		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:20:13-34
 activity#com.example.projetm2.cours
-ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:20:9-22:40
+ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:22:9-24:40
 	android:exported
-		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:22:13-37
+		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:24:13-37
 	android:name
-		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:21:13-34
+		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:23:13-34
 activity#com.example.projetm2.what_to_do
-ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:23:9-25:40
+ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:25:9-27:40
 	android:exported
-		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:25:13-37
+		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:27:13-37
 	android:name
-		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:24:13-39
+		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:26:13-39
 activity#com.example.projetm2.choose
-ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:26:9-28:40
+ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:28:9-30:40
 	android:exported
-		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:28:13-37
+		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:30:13-37
 	android:name
-		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:27:13-35
+		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:29:13-35
 activity#com.example.projetm2.introduction
-ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:29:9-31:40
+ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:31:9-33:40
 	android:exported
-		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:31:13-37
+		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:33:13-37
 	android:name
-		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:30:13-41
+		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:32:13-41
 activity#com.example.projetm2.creat_account
-ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:32:9-34:40
+ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:34:9-36:40
 	android:exported
-		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:34:13-37
+		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:36:13-37
 	android:name
-		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:33:13-42
+		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:35:13-42
+activity#com.example.projetm2.forgot_password
+ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:38:9-40:39
+	android:exported
+		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:40:13-37
+	android:name
+		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:39:13-44
 activity#com.example.projetm2.log_in
-ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:35:9-37:40
+ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:42:9-50:20
 	android:exported
-		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:37:13-37
+		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:44:13-36
 	android:name
-		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:36:13-35
-activity#com.example.projetm2.MainActivity
-ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:38:9-46:20
-	android:exported
-		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:40:13-36
-	android:name
-		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:39:13-41
+		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:43:13-35
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:41:13-45:29
+ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:45:13-49:29
 action#android.intent.action.MAIN
-ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:42:17-69
+ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:46:17-69
 	android:name
-		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:42:25-66
+		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:46:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:44:17-77
+ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:48:17-77
 	android:name
-		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:44:27-74
+		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:48:27-74
+service#com.example.projetm2.timetrackservice
+ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:51:9-53:40
+	android:exported
+		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:53:13-37
+	android:name
+		ADDED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml:52:13-45
 uses-sdk
 INJECTED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/schad/AndroidStudioProjects/app 2/app/src/main/AndroidManifest.xml

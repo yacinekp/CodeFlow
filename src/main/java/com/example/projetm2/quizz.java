@@ -1,55 +1,39 @@
 package com.example.projetm2;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.widget.RadioGroup;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
+import java.util.List;
 
 public class quizz extends AppCompatActivity {
-
-    Button quizzprv, btnSubmit, btnLogout;
+    Button quizzprv, btnSubmit, quizzNext;
     RadioGroup radioGroup;
     RadioButton rb1, rb2, rb3, rb4;
-    TextView tvQuestion, tvBottomNote, comment, tvUsername;
+    TextView tvQuestion, tvBottomNote, comment;
+    TextView tvUsername;
+    Button btnLogout;
+
+    int index;
+    String track;
+    List<CourseItem> usedList;
+    CourseItem current;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quizz);
 
-        // SESSION UI
-        tvUsername = findViewById(R.id.tvUsername);
-        btnLogout = findViewById(R.id.btnLogout);
-
-        // Load session
-        SharedPreferences prefs = getSharedPreferences("session", MODE_PRIVATE);
-        String username = prefs.getString("username", null);
-
-        if (username == null) {
-            Intent intent = new Intent(quizz.this, log_in.class);
-            startActivity(intent);
-            finish();
-            return;
-        }
-
-        tvUsername.setText(username);
-
-        btnLogout.setOnClickListener(v -> {
-            prefs.edit().clear().apply();
-            Intent intent = new Intent(quizz.this, log_in.class);
-            startActivity(intent);
-            finish();
-        });
-
-        // QUIZ UI
         quizzprv = findViewById(R.id.btnquizzprevious);
+        quizzNext = findViewById(R.id.btnquizznext); // may be null if not in XML
         comment = findViewById(R.id.BottomNote);
 
         tvQuestion = findViewById(R.id.tvQuestion);
@@ -61,62 +45,87 @@ public class quizz extends AppCompatActivity {
         rb4 = findViewById(R.id.rbChoice4);
         btnSubmit = findViewById(R.id.btnSubmitsQuizz);
 
-        // Load quiz data from intent
-        String question = getIntent().getStringExtra("question");
-        String p1 = getIntent().getStringExtra("p1");
-        String p2 = getIntent().getStringExtra("p2");
-        String p3 = getIntent().getStringExtra("p3");
-        String p4 = getIntent().getStringExtra("p4");
-        String correct = getIntent().getStringExtra("correct");
+        // session UI
+        tvUsername = findViewById(R.id.tvUsername);
+        btnLogout = findViewById(R.id.btnLogout);
+        SessionManager session = new SessionManager(this);
+        if (!session.isLoggedIn()) {
+            startActivity(new Intent(this, log_in.class));
+            finish();
+            return;
+        }
+        tvUsername.setText(session.getUsername());
+        btnLogout.setOnClickListener(v -> {
+            session.logout();
+            startActivity(new Intent(quizz.this, log_in.class));
+            finish();
+        });
 
-        String c1 = getIntent().getStringExtra("c1");
-        String c2 = getIntent().getStringExtra("c2");
-        String c3 = getIntent().getStringExtra("c3");
-        String c4 = getIntent().getStringExtra("c4");
+        index = getIntent().getIntExtra("index", 0);
+        track = getIntent().getStringExtra("track");
+        usedList = "c".equals(track) ? GlobalContent.cList : GlobalContent.algoList;
 
-        tvQuestion.setText(question);
-        rb1.setText(p1);
-        rb2.setText(p2);
-        rb3.setText(p3);
-        rb4.setText(p4);
+        if (usedList == null || index < 0 || index >= usedList.size()) {
+            tvQuestion.setText("Quiz not available.");
+            return;
+        }
 
-        // Submit logic
-        btnSubmit.setOnClickListener(v -> {
-            int selectedId = radioGroup.getCheckedRadioButtonId();
+        current = usedList.get(index);
+        if (!current.isQuiz()) {
+            // If item is actually a lesson, redirect to cours
+            Intent intent = new Intent(this, cours.class);
+            intent.putExtra("cours", current.getContent());
+            intent.putExtra("index", index);
+            intent.putExtra("track", track);
+            startActivity(intent);
+            finish();
+            return;
+        }
 
-            if (selectedId == -1) {
-                tvBottomNote.setText("Please select an answer!");
-                return;
-            }
+        // populate current quiz
+        tvQuestion.setText(current.getQuestion());
+        rb1.setText(current.getP1());
+        rb2.setText(current.getP2());
+        rb3.setText(current.getP3());
+        rb4.setText(current.getP4());
 
-            RadioButton selected = findViewById(selectedId);
-            String userAnswer = selected.getText().toString();
+        btnSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-            rb1.setBackgroundColor(Color.TRANSPARENT);
-            rb2.setBackgroundColor(Color.TRANSPARENT);
-            rb3.setBackgroundColor(Color.TRANSPARENT);
-            rb4.setBackgroundColor(Color.TRANSPARENT);
+                int selectedId = radioGroup.getCheckedRadioButtonId();
 
-            if (userAnswer.equals(correct)) {
-                tvBottomNote.setText("correct");
-                tvBottomNote.setTextColor(Color.WHITE);
-                comment.setBackgroundColor(Color.GREEN);
-                selected.setBackgroundColor(Color.GREEN);
+                if (selectedId == -1) {
+                    tvBottomNote.setText("Please select an answer!");
+                    return;
+                }
 
-            } else {
+                RadioButton selected = findViewById(selectedId);
+                String userAnswer = selected.getText().toString();
 
-                if (selected == rb1) tvBottomNote.setText(c1);
-                if (selected == rb2) tvBottomNote.setText(c2);
-                if (selected == rb3) tvBottomNote.setText(c3);
-                if (selected == rb4) tvBottomNote.setText(c4);
+                rb1.setBackgroundColor(Color.TRANSPARENT);
+                rb2.setBackgroundColor(Color.TRANSPARENT);
+                rb3.setBackgroundColor(Color.TRANSPARENT);
+                rb4.setBackgroundColor(Color.TRANSPARENT);
 
-                tvBottomNote.setTextColor(Color.WHITE);
-                comment.setBackgroundColor(Color.RED);
-                selected.setBackgroundColor(Color.RED);
+                if (userAnswer.equals(current.getCorrect())) {
+                    tvBottomNote.setText("correct");
+                    tvBottomNote.setTextColor(Color.WHITE);
+                    comment.setBackgroundColor(Color.GREEN);
+                    selected.setBackgroundColor(Color.GREEN);
+
+                } else {
+                    if (selected == rb1) tvBottomNote.setText(current.getC1());
+                    if (selected == rb2) tvBottomNote.setText(current.getC2());
+                    if (selected == rb3) tvBottomNote.setText(current.getC3());
+                    if (selected == rb4) tvBottomNote.setText(current.getC4());
+                    tvBottomNote.setTextColor(Color.WHITE);
+                    comment.setBackgroundColor(Color.RED);
+                    selected.setBackgroundColor(Color.RED);
+                }
             }
         });
 
-        // Previous button
         quizzprv.setOnClickListener(v -> {
             rb1.setBackgroundColor(Color.TRANSPARENT);
             rb2.setBackgroundColor(Color.TRANSPARENT);
@@ -126,8 +135,68 @@ public class quizz extends AppCompatActivity {
             tvBottomNote.setText("");
             comment.setBackgroundColor(Color.TRANSPARENT);
 
-            Intent intent = new Intent(quizz.this, what_to_do.class);
-            startActivity(intent);
+            int prev = index - 1;
+            if (prev >= 0) {
+                CourseItem prevItem = usedList.get(prev);
+                if (prevItem.isQuiz()) {
+                    Intent intent = new Intent(quizz.this, quizz.class);
+                    fillQuizIntent(intent, prevItem);
+                    intent.putExtra("index", prev);
+                    intent.putExtra("track", track);
+                    startActivity(intent);
+                } else {
+                    Intent intent = new Intent(quizz.this, cours.class);
+                    intent.putExtra("cours", prevItem.getContent());
+                    intent.putExtra("index", prev);
+                    intent.putExtra("track", track);
+                    startActivity(intent);
+                }
+                finish();
+            }
         });
+
+        if (quizzNext != null) {
+            quizzNext.setOnClickListener(v -> {
+                rb1.setBackgroundColor(Color.TRANSPARENT);
+                rb2.setBackgroundColor(Color.TRANSPARENT);
+                rb3.setBackgroundColor(Color.TRANSPARENT);
+                rb4.setBackgroundColor(Color.TRANSPARENT);
+                radioGroup.clearCheck();
+                tvBottomNote.setText("");
+                comment.setBackgroundColor(Color.TRANSPARENT);
+
+                int next = index + 1;
+                if (next < usedList.size()) {
+                    CourseItem nextItem = usedList.get(next);
+                    if (nextItem.isQuiz()) {
+                        Intent intent = new Intent(quizz.this, quizz.class);
+                        fillQuizIntent(intent, nextItem);
+                        intent.putExtra("index", next);
+                        intent.putExtra("track", track);
+                        startActivity(intent);
+                    } else {
+                        Intent intent = new Intent(quizz.this, cours.class);
+                        intent.putExtra("cours", nextItem.getContent());
+                        intent.putExtra("index", next);
+                        intent.putExtra("track", track);
+                        startActivity(intent);
+                    }
+                    finish();
+                }
+            });
+        }
+    }
+
+    private void fillQuizIntent(Intent intent, CourseItem item) {
+        intent.putExtra("question", item.getQuestion());
+        intent.putExtra("p1", item.getP1());
+        intent.putExtra("p2", item.getP2());
+        intent.putExtra("p3", item.getP3());
+        intent.putExtra("p4", item.getP4());
+        intent.putExtra("correct", item.getCorrect());
+        intent.putExtra("c1", item.getC1());
+        intent.putExtra("c2", item.getC2());
+        intent.putExtra("c3", item.getC3());
+        intent.putExtra("c4", item.getC4());
     }
 }

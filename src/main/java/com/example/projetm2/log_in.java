@@ -13,6 +13,7 @@ public class log_in extends AppCompatActivity {
 
     EditText etUsername, etPassword;
     Button btnLogin, btnCreate;
+    Button btnForgot;
 
     database_Handler db;
 
@@ -28,6 +29,13 @@ public class log_in extends AppCompatActivity {
 
         btnLogin = findViewById(R.id.btnLogin);
         btnCreate = findViewById(R.id.btnCreateAccount);
+        btnForgot = findViewById(R.id.btnForgotPassword);
+
+        btnForgot.setOnClickListener(v -> {
+            Intent i = new Intent(log_in.this, forgot_password.class);
+            startActivity(i);
+        });
+
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +60,10 @@ public class log_in extends AppCompatActivity {
                     // CREATE SESSION
                     SessionManager session = new SessionManager(log_in.this);
                     session.createSession(username);
+
+                    Intent serviceIntent = new Intent(log_in.this, timetrackservice.class);
+                    serviceIntent.putExtra("username", username);
+                    startService(serviceIntent);
 
                     Intent i = new Intent(log_in.this, choose.class);
                     startActivity(i);

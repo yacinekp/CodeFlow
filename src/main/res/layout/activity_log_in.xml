@@ -83,6 +83,18 @@
         android:textStyle="italic"/>
 
     <Button
+        android:id="@+id/btnForgotPassword"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Forgot password?"
+        android:textSize="16sp"
+        android:backgroundTint="#9C27B0"
+        android:textColor="#FFFFFF"
+        android:fontFamily="serif"
+        android:textStyle="italic"
+        android:layout_marginTop="10dp"/>
+
+    <Button
         android:id="@+id/btnCreateAccount"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
