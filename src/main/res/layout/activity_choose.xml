@@ -1,12 +1,106 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="16dp" android:background="@drawable/f">
-    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp">
-        <TextView android:id="@+id/tvUsername" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Username" android:textSize="18sp" android:textColor="@color/white" android:layout_alignParentStart="true" android:layout_centerVertical="true" android:fontFamily="serif" android:textStyle="bold|italic"/>
-        <Button android:id="@+id/btnLogout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Log out" android:textAllCaps="false" android:backgroundTint="#F44336" android:textColor="#FFFFFF" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:fontFamily="serif" android:textStyle="bold|italic"/>
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/f">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:id="@+id/tvUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="serif"
+            android:textStyle="bold|italic"/>
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log out"
+            android:textAllCaps="false"
+            android:backgroundTint="#F44336"
+            android:textColor="#FFFFFF"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="serif"
+            android:textStyle="italic"/>
     </RelativeLayout>
-    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
-        <TextView android:id="@+id/tvChoose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Choose a subject to learn :" android:textSize="25dp" android:textColor="@color/white" android:layout_marginBottom="20dp" android:fontFamily="serif" android:textStyle="bold|italic" android:paddingBottom="100dp"/>
-        <Button android:id="@+id/btnAlgorithmic" android:layout_width="200dp" android:layout_height="wrap_content" android:text="Algorithmic" android:layout_marginBottom="12dp" android:textSize="18sp" android:backgroundTint="@color/white" android:textColor="#800080" android:fontFamily="serif" android:textStyle="italic"/>
-        <Button android:id="@+id/btnC_Language" android:layout_width="200dp" android:layout_height="wrap_content" android:text="C Language" android:textSize="18sp" android:backgroundTint="@color/white" android:textColor="#800080" android:fontFamily="serif" android:textStyle="italic" android:layout_marginTop="50dp"/>
-    </LinearLayout>
-    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp"> </RelativeLayout>
+
+    <!-- STUDY TIME DISPLAY -->
+    <!--    <TextView-->
+    <!--        android:id="@+id/tvStudyTime"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Study Time: 0h 0m 0s"-->
+    <!--        android:textSize="16sp"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:layout_marginTop="8dp"-->
+    <!--        android:layout_marginBottom="32dp"-->
+    <!--        android:fontFamily="serif"-->
+    <!--        android:textStyle="italic"/>-->
+
+    <!-- Welcome Message -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Code Flow!"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="serif"
+        android:textStyle="bold|italic"/>
+
+    <!-- Subject Selection Message -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose a subject to learn:"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="serif"
+        android:textStyle="italic"/>
+
+    <!-- Algorithmic Button -->
+    <Button
+        android:id="@+id/btnAlgorithmic"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Algorithmic"
+        android:textSize="18sp"
+        android:backgroundTint="#2196F3"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="serif"
+        android:textStyle="italic"/>
+
+    <!-- C Language Button -->
+    <Button
+        android:id="@+id/btnCLanguage"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="C Language"
+        android:textSize="18sp"
+        android:backgroundTint="#4CAF50"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="serif"
+        android:textStyle="italic"/>
+
 </LinearLayout>

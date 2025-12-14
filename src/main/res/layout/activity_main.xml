@@ -21,55 +21,6 @@
         android:paddingTop="50dp"
         android:paddingBottom="50dp"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="User name :"
-        android:textSize="25dp"
-        android:textColor="@color/white"
-        android:layout_marginBottom="6dp"
-        android:fontFamily="serif"
-        android:textStyle="italic"/>
-
-    <EditText
-        android:id="@+id/idusername"
-        android:layout_width="280dp"
-        android:layout_height="wrap_content"
-        android:hint="User name :"
-        android:textSize="18sp"
-        android:inputType="textPersonName"
-        android:drawableLeft="@android:drawable/ic_menu_edit"
-        android:padding="12dp"
-        android:layout_marginBottom="16dp"
-        android:background="@android:drawable/edit_text"
-        android:fontFamily="serif"
-        android:textStyle="italic"/>
-
-    <TextView
-        android:id="@+id/labelPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Password"
-        android:textColor="@color/white"
-        android:textSize="25dp"
-        android:layout_marginBottom="6dp"
-        android:fontFamily="serif"
-        android:textStyle="italic"/>
-
-    <EditText
-        android:id="@+id/idpassword"
-        android:layout_width="280dp"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:drawableLeft="@android:drawable/ic_lock_idle_lock"
-        android:padding="12dp"
-        android:layout_marginBottom="24dp"
-        android:background="@android:drawable/edit_text"
-        android:fontFamily="serif"
-        android:textStyle="italic"/>
-
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="200dp"
@@ -86,11 +37,25 @@
         android:id="@+id/btnCreateAccount"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="Creat account"
+        android:text="Create account"
         android:textSize="18sp"
         android:backgroundTint="#4CAF50"
         android:textColor="#FFFFFF"
         android:fontFamily="serif"
         android:textStyle="italic"/>
+
+    <!-- Optional: Remove this button if not needed -->
+    <!--
+    <Button
+        android:id="@+id/btnTestEmail"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Test Email"
+        android:textSize="18sp"
+        android:backgroundTint="#FF9800"
+        android:textColor="#FFFFFF"
+        android:fontFamily="serif"
+        android:textStyle="italic"/>
+    -->
 
 </LinearLayout>

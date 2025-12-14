@@ -7,9 +7,55 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@drawable/f"
+    android:background="@drawable/f">
 
-    >
+    <!-- TIMER AT TOP -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time: "
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:fontFamily="serif"/>
+
+        <TextView
+            android:id="@+id/tvTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30"
+            android:textSize="24sp"
+            android:textColor="#FFD700"
+            android:fontFamily="serif"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="s"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:fontFamily="serif"/>
+    </LinearLayout>
+
+    <!-- STUDY TIME DISPLAY -->
+<!--    <TextView-->
+<!--        android:id="@+id/tvStudyTime"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Study Time: 0h 0m 0s"-->
+<!--        android:textSize="14sp"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginBottom="12dp"-->
+<!--        android:fontFamily="serif"-->
+<!--        android:textStyle="italic"/>-->
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -26,8 +72,7 @@
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
             android:fontFamily="serif"
-            android:textStyle="bold|italic"
-            />
+            android:textStyle="bold|italic"/>
 
         <Button
             android:id="@+id/btnLogout"
@@ -69,7 +114,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
-
                 android:orientation="vertical">
 
                 <RadioButton
@@ -80,10 +124,8 @@
                     android:padding="12dp"
                     android:layout_marginVertical="6dp"
                     android:text="1"
-
                     android:textSize="16sp"
                     android:textColor="@color/black"/>
-
 
                 <RadioButton
                     android:id="@+id/rbChoice2"
@@ -94,7 +136,6 @@
                     android:layout_marginVertical="6dp"
                     android:text="2"
                     android:textColor="@color/black"
-
                     android:textSize="16sp" />
 
                 <RadioButton
@@ -106,7 +147,6 @@
                     android:layout_marginVertical="6dp"
                     android:text="3"
                     android:textColor="@color/black"
-
                     android:textSize="16sp" />
 
                 <RadioButton
@@ -120,6 +160,7 @@
                     android:textColor="@color/black"
                     android:textSize="16sp" />
             </RadioGroup>
+
             <Button
                 android:id="@+id/btnSubmitsQuizz"
                 android:layout_width="200dp"
@@ -131,6 +172,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="serif"
                 android:textStyle="italic"/>
+
             <TextView
                 android:id="@+id/BottomNote"
                 android:layout_width="match_parent"
@@ -158,19 +200,5 @@
             android:layout_alignParentStart="true"
             android:fontFamily="serif"
             android:textStyle="italic"/>
-        <Button
-            android:id="@+id/btnquizznext"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Next"
-            android:textAllCaps="false"
-            android:backgroundTint="#9E9E9E"
-            android:textColor="#FFFFFF"
-            android:layout_alignParentEnd="true"
-            android:fontFamily="serif"
-            android:textStyle="italic"/>
-
-
     </RelativeLayout>
-
 </LinearLayout>

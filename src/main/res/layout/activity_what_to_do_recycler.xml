@@ -40,6 +40,20 @@
             android:textStyle="italic"/>
     </RelativeLayout>
 
+<!--     STUDY TIME DISPLAY-->
+<!--    <TextView-->
+<!--        android:id="@+id/tvStudyTime"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Study Time: 0h 0m 0s"-->
+<!--        android:textSize="16sp"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:layout_marginBottom="16dp"-->
+<!--        android:fontFamily="serif"-->
+<!--        android:textStyle="italic"/>-->
+
     <TextView
         android:id="@+id/tvChooseLesson"
         android:layout_width="wrap_content"
