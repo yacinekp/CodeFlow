@@ -3,23 +3,21 @@ package com.example.projetm2;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.widget.RadioGroup;
-import android.widget.RadioButton;
-import android.widget.TextView;
 
 import java.util.List;
 
 public class quizz extends AppCompatActivity {
+
     Button quizzprv, btnSubmit, quizzNext;
     RadioGroup radioGroup;
     RadioButton rb1, rb2, rb3, rb4;
-    TextView tvQuestion, tvBottomNote, comment;
-    TextView tvUsername;
+    TextView tvQuestion, tvBottomNote, comment, tvUsername;
     Button btnLogout;
 
     int index;
@@ -33,9 +31,8 @@ public class quizz extends AppCompatActivity {
         setContentView(R.layout.activity_quizz);
 
         quizzprv = findViewById(R.id.btnquizzprevious);
-        quizzNext = findViewById(R.id.btnquizznext); // may be null if not in XML
+        quizzNext = findViewById(R.id.btnquizznext);
         comment = findViewById(R.id.BottomNote);
-
         tvQuestion = findViewById(R.id.tvQuestion);
         tvBottomNote = findViewById(R.id.BottomNote);
         radioGroup = findViewById(R.id.radioGroupChoices);
@@ -45,7 +42,6 @@ public class quizz extends AppCompatActivity {
         rb4 = findViewById(R.id.rbChoice4);
         btnSubmit = findViewById(R.id.btnSubmitsQuizz);
 
-        // session UI
         tvUsername = findViewById(R.id.tvUsername);
         btnLogout = findViewById(R.id.btnLogout);
         SessionManager session = new SessionManager(this);
@@ -72,7 +68,6 @@ public class quizz extends AppCompatActivity {
 
         current = usedList.get(index);
         if (!current.isQuiz()) {
-            // If item is actually a lesson, redirect to cours
             Intent intent = new Intent(this, cours.class);
             intent.putExtra("cours", current.getContent());
             intent.putExtra("index", index);
@@ -82,109 +77,59 @@ public class quizz extends AppCompatActivity {
             return;
         }
 
-        // populate current quiz
         tvQuestion.setText(current.getQuestion());
         rb1.setText(current.getP1());
         rb2.setText(current.getP2());
         rb3.setText(current.getP3());
         rb4.setText(current.getP4());
 
-        btnSubmit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        btnSubmit.setOnClickListener(v -> checkAnswer());
 
-                int selectedId = radioGroup.getCheckedRadioButtonId();
+        quizzprv.setOnClickListener(v -> navigateQuiz(index - 1));
+        if (quizzNext != null) quizzNext.setOnClickListener(v -> navigateQuiz(index + 1));
+    }
 
-                if (selectedId == -1) {
-                    tvBottomNote.setText("Please select an answer!");
-                    return;
-                }
-
-                RadioButton selected = findViewById(selectedId);
-                String userAnswer = selected.getText().toString();
-
-                rb1.setBackgroundColor(Color.TRANSPARENT);
-                rb2.setBackgroundColor(Color.TRANSPARENT);
-                rb3.setBackgroundColor(Color.TRANSPARENT);
-                rb4.setBackgroundColor(Color.TRANSPARENT);
-
-                if (userAnswer.equals(current.getCorrect())) {
-                    tvBottomNote.setText("correct");
-                    tvBottomNote.setTextColor(Color.WHITE);
-                    comment.setBackgroundColor(Color.GREEN);
-                    selected.setBackgroundColor(Color.GREEN);
-
-                } else {
-                    if (selected == rb1) tvBottomNote.setText(current.getC1());
-                    if (selected == rb2) tvBottomNote.setText(current.getC2());
-                    if (selected == rb3) tvBottomNote.setText(current.getC3());
-                    if (selected == rb4) tvBottomNote.setText(current.getC4());
-                    tvBottomNote.setTextColor(Color.WHITE);
-                    comment.setBackgroundColor(Color.RED);
-                    selected.setBackgroundColor(Color.RED);
-                }
-            }
-        });
-
-        quizzprv.setOnClickListener(v -> {
-            rb1.setBackgroundColor(Color.TRANSPARENT);
-            rb2.setBackgroundColor(Color.TRANSPARENT);
-            rb3.setBackgroundColor(Color.TRANSPARENT);
-            rb4.setBackgroundColor(Color.TRANSPARENT);
-            radioGroup.clearCheck();
-            tvBottomNote.setText("");
-            comment.setBackgroundColor(Color.TRANSPARENT);
-
-            int prev = index - 1;
-            if (prev >= 0) {
-                CourseItem prevItem = usedList.get(prev);
-                if (prevItem.isQuiz()) {
-                    Intent intent = new Intent(quizz.this, quizz.class);
-                    fillQuizIntent(intent, prevItem);
-                    intent.putExtra("index", prev);
-                    intent.putExtra("track", track);
-                    startActivity(intent);
-                } else {
-                    Intent intent = new Intent(quizz.this, cours.class);
-                    intent.putExtra("cours", prevItem.getContent());
-                    intent.putExtra("index", prev);
-                    intent.putExtra("track", track);
-                    startActivity(intent);
-                }
-                finish();
-            }
-        });
-
-        if (quizzNext != null) {
-            quizzNext.setOnClickListener(v -> {
-                rb1.setBackgroundColor(Color.TRANSPARENT);
-                rb2.setBackgroundColor(Color.TRANSPARENT);
-                rb3.setBackgroundColor(Color.TRANSPARENT);
-                rb4.setBackgroundColor(Color.TRANSPARENT);
-                radioGroup.clearCheck();
-                tvBottomNote.setText("");
-                comment.setBackgroundColor(Color.TRANSPARENT);
-
-                int next = index + 1;
-                if (next < usedList.size()) {
-                    CourseItem nextItem = usedList.get(next);
-                    if (nextItem.isQuiz()) {
-                        Intent intent = new Intent(quizz.this, quizz.class);
-                        fillQuizIntent(intent, nextItem);
-                        intent.putExtra("index", next);
-                        intent.putExtra("track", track);
-                        startActivity(intent);
-                    } else {
-                        Intent intent = new Intent(quizz.this, cours.class);
-                        intent.putExtra("cours", nextItem.getContent());
-                        intent.putExtra("index", next);
-                        intent.putExtra("track", track);
-                        startActivity(intent);
-                    }
-                    finish();
-                }
-            });
+    private void checkAnswer() {
+        int selectedId = radioGroup.getCheckedRadioButtonId();
+        if (selectedId == -1) {
+            tvBottomNote.setText("Please select an answer!");
+            return;
         }
+
+        RadioButton selected = findViewById(selectedId);
+        String userAnswer = selected.getText().toString();
+
+        rb1.setBackgroundColor(Color.TRANSPARENT);
+        rb2.setBackgroundColor(Color.TRANSPARENT);
+        rb3.setBackgroundColor(Color.TRANSPARENT);
+        rb4.setBackgroundColor(Color.TRANSPARENT);
+
+        if (userAnswer.equals(current.getCorrect())) {
+            tvBottomNote.setText("Correct");
+            tvBottomNote.setTextColor(Color.WHITE);
+            comment.setBackgroundColor(Color.GREEN);
+            selected.setBackgroundColor(Color.GREEN);
+        } else {
+            if (selected == rb1) tvBottomNote.setText(current.getC1());
+            if (selected == rb2) tvBottomNote.setText(current.getC2());
+            if (selected == rb3) tvBottomNote.setText(current.getC3());
+            if (selected == rb4) tvBottomNote.setText(current.getC4());
+            tvBottomNote.setTextColor(Color.WHITE);
+            comment.setBackgroundColor(Color.RED);
+            selected.setBackgroundColor(Color.RED);
+        }
+    }
+
+    private void navigateQuiz(int newIndex) {
+        if (usedList == null || newIndex < 0 || newIndex >= usedList.size()) return;
+        CourseItem item = usedList.get(newIndex);
+        Intent intent = item.isQuiz() ? new Intent(this, quizz.class) : new Intent(this, cours.class);
+        if (item.isQuiz()) fillQuizIntent(intent, item);
+        else intent.putExtra("cours", item.getContent());
+        intent.putExtra("index", newIndex);
+        intent.putExtra("track", track);
+        startActivity(intent);
+        finish();
     }
 
     private void fillQuizIntent(Intent intent, CourseItem item) {

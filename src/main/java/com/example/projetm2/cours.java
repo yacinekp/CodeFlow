@@ -3,7 +3,6 @@ package com.example.projetm2;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -12,10 +11,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.List;
 
 public class cours extends AppCompatActivity {
-    Button crprv;
-    Button crnext;
-    TextView cour;
-    TextView tvUsername;
+
+    Button crprv, crnext;
+    TextView cour, tvUsername;
     Button btnLogout;
 
     int index;
@@ -28,10 +26,9 @@ public class cours extends AppCompatActivity {
         setContentView(R.layout.activity_cours);
 
         crprv = findViewById(R.id.btncrprevious);
-        crnext = findViewById(R.id.btncrnext); // may be null if your XML doesn't have it yet
+        crnext = findViewById(R.id.btncrnext);
         cour = findViewById(R.id.CourseContent);
 
-        // session UI
         tvUsername = findViewById(R.id.tvUsername);
         btnLogout = findViewById(R.id.btnLogout);
         SessionManager session = new SessionManager(this);
@@ -58,7 +55,6 @@ public class cours extends AppCompatActivity {
 
         CourseItem item = usedList.get(index);
         if (item.isQuiz()) {
-            // If this index actually points to a quiz, redirect
             Intent intent = new Intent(this, quizz.class);
             fillQuizIntent(intent, item);
             intent.putExtra("index", index);
@@ -68,54 +64,22 @@ public class cours extends AppCompatActivity {
             return;
         }
 
-        String coursHtml = item.getContent();
-        if (coursHtml != null) {
-            cour.setText(Html.fromHtml(coursHtml, Html.FROM_HTML_MODE_LEGACY));
-        }
+        cour.setText(Html.fromHtml(item.getContent(), Html.FROM_HTML_MODE_LEGACY));
 
-        crprv.setOnClickListener(v -> {
-            int prev = index - 1;
-            if (prev >= 0) {
-                CourseItem prevItem = usedList.get(prev);
-                if (prevItem.isQuiz()) {
-                    Intent intent = new Intent(cours.this, quizz.class);
-                    fillQuizIntent(intent, prevItem);
-                    intent.putExtra("index", prev);
-                    intent.putExtra("track", track);
-                    startActivity(intent);
-                } else {
-                    Intent intent = new Intent(cours.this, cours.class);
-                    intent.putExtra("cours", prevItem.getContent());
-                    intent.putExtra("index", prev);
-                    intent.putExtra("track", track);
-                    startActivity(intent);
-                }
-                finish();
-            }
-        });
+        crprv.setOnClickListener(v -> navigateCourse(index - 1));
+        if (crnext != null) crnext.setOnClickListener(v -> navigateCourse(index + 1));
+    }
 
-        if (crnext != null) {
-            crnext.setOnClickListener(v -> {
-                int next = index + 1;
-                if (next < usedList.size()) {
-                    CourseItem nextItem = usedList.get(next);
-                    if (nextItem.isQuiz()) {
-                        Intent intent = new Intent(cours.this, quizz.class);
-                        fillQuizIntent(intent, nextItem);
-                        intent.putExtra("index", next);
-                        intent.putExtra("track", track);
-                        startActivity(intent);
-                    } else {
-                        Intent intent = new Intent(cours.this, cours.class);
-                        intent.putExtra("cours", nextItem.getContent());
-                        intent.putExtra("index", next);
-                        intent.putExtra("track", track);
-                        startActivity(intent);
-                    }
-                    finish();
-                }
-            });
-        }
+    private void navigateCourse(int newIndex) {
+        if (usedList == null || newIndex < 0 || newIndex >= usedList.size()) return;
+        CourseItem item = usedList.get(newIndex);
+        Intent intent = item.isQuiz() ? new Intent(this, quizz.class) : new Intent(this, cours.class);
+        if (item.isQuiz()) fillQuizIntent(intent, item);
+        else intent.putExtra("cours", item.getContent());
+        intent.putExtra("index", newIndex);
+        intent.putExtra("track", track);
+        startActivity(intent);
+        finish();
     }
 
     private void fillQuizIntent(Intent intent, CourseItem item) {

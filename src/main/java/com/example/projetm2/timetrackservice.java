@@ -1,117 +1,77 @@
 package com.example.projetm2;
 
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Handler;
 import android.os.IBinder;
-import android.os.SystemClock;
+import android.os.Looper;
+import android.widget.Toast;
 
-import androidx.core.app.NotificationCompat;
+import androidx.annotation.Nullable;
 
 public class timetrackservice extends Service {
 
-    private static final long INACTIVITY_LIMIT_MS = 15000; // 15s for testing
-    private static final String CHANNEL_ID = "inactivity_channel";
-
-    private long lastActivityTime;
-    private Handler inactivityHandler;
-    private Runnable inactivityRunnable;
-
-    private database_Handler db;
     private String username;
+    private database_Handler db;
+    private Handler handler;
+    private Runnable runnable;
+    private long sessionStartTime;
+
+    private static final long UPDATE_INTERVAL = 1000 * 60; // 1 minute
 
     @Override
     public void onCreate() {
         super.onCreate();
-
         db = new database_Handler(this);
-        inactivityHandler = new Handler();
-
-        createNotificationChannel();
-
-        lastActivityTime = SystemClock.elapsedRealtime();
-
-        inactivityRunnable = new Runnable() {
-            @Override
-            public void run() {
-                long now = SystemClock.elapsedRealtime();
-
-                if (now - lastActivityTime >= INACTIVITY_LIMIT_MS) {
-                    sendInactivityNotification();
-                }
-
-                inactivityHandler.postDelayed(this, 5000);
-            }
-        };
-
-        inactivityHandler.postDelayed(inactivityRunnable, 5000); // checks every 5s
+        handler = new Handler(Looper.getMainLooper());
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-
         username = intent.getStringExtra("username");
+        if (username == null || username.isEmpty()) {
+            stopSelf();
+            return START_NOT_STICKY;
+        }
 
-        lastActivityTime = SystemClock.elapsedRealtime();
+        sessionStartTime = System.currentTimeMillis();
 
+        runnable = new Runnable() {
+            @Override
+            public void run() {
+                long now = System.currentTimeMillis();
+                long elapsedSeconds = (now - sessionStartTime) / 1000;
+                db.addTime(username, elapsedSeconds);
+                db.updateLastActive(username);
+
+                // reset start time for next interval
+                sessionStartTime = now;
+
+                // Schedule next update
+                handler.postDelayed(this, UPDATE_INTERVAL);
+            }
+        };
+
+        // Start the periodic task
+        handler.postDelayed(runnable, UPDATE_INTERVAL);
+
+        // Return START_STICKY if you want service to continue in background
         return START_STICKY;
-    }
-
-    // Called by Activities to reset inactivity timer
-    public void updateUserActivity() {
-        lastActivityTime = SystemClock.elapsedRealtime();
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-
-        inactivityHandler.removeCallbacks(inactivityRunnable);
-
-        db.addTime(username, (SystemClock.elapsedRealtime() - lastActivityTime) / 1000);
+        if (handler != null && runnable != null) {
+            handler.removeCallbacks(runnable);
+        }
+        Toast.makeText(this, "Session tracking stopped for " + username, Toast.LENGTH_SHORT).show();
     }
 
+    @Nullable
     @Override
     public IBinder onBind(Intent intent) {
+        // We are not binding, so return null
         return null;
-    }
-
-    // ---------- NOTIFICATION SYSTEM ---------- //
-
-    private void createNotificationChannel() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            NotificationChannel channel = new NotificationChannel(
-                    CHANNEL_ID,
-                    "Inactivity Alerts",
-                    NotificationManager.IMPORTANCE_HIGH
-            );
-            channel.setDescription("Notifies when user is inactive for too long");
-
-            NotificationManager manager = getSystemService(NotificationManager.class);
-            manager.createNotificationChannel(channel);
-        }
-    }
-
-    private void sendInactivityNotification() {
-
-        Intent intent = new Intent(this, log_in.class);
-        PendingIntent pendingIntent = PendingIntent.getActivity(
-                this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE
-        );
-
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
-                .setSmallIcon(android.R.drawable.ic_dialog_alert)
-                .setContentTitle("Inactivité détectée")
-                .setContentText("Vous êtes inactif depuis 15 secondes.")
-                .setPriority(NotificationCompat.PRIORITY_HIGH)
-                .setAutoCancel(true)
-                .setContentIntent(pendingIntent);
-
-        NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-        manager.notify(1, builder.build());
     }
 }

@@ -41,9 +41,9 @@ public class creat_account extends AppCompatActivity {
         db = new database_Handler(this);
 
         etUsername = findViewById(R.id.CreateAccountUserName);
-        etPassword = findViewById(R.id.btnCreateAccountPassword);
-        etConfirmPassword = findViewById(R.id.btnCreateAccountConfirmPassword);
-
+        etPassword = findViewById(R.id.CreateAccountPassword);
+        etConfirmPassword = findViewById(R.id.CreateAccountConfirmPassword);
+                                                        
         create = findViewById(R.id.btnCreate);
 
         btnAlreadyHave = findViewById(R.id.btnAlreadyHave);

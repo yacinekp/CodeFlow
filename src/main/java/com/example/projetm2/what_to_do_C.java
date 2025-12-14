@@ -35,7 +35,6 @@ public class what_to_do_C extends AppCompatActivity {
             return;
         }
 
-        // UI
         tvUsername = findViewById(R.id.tvUsername);
         btnLogout = findViewById(R.id.btnLogout);
 
@@ -54,19 +53,20 @@ public class what_to_do_C extends AppCompatActivity {
 
         GlobalContent.cList = courseList;
 
-        adapter = new CourseQuizAdapter(what_to_do_C.this, courseList);
+        adapter = new CourseQuizAdapter(what_to_do_C.this, courseList,"c");
         recyclerView.setAdapter(adapter);
 
         Button goToAlgo = findViewById(R.id.btnGoToAlgo);
-        goToAlgo.setOnClickListener(v -> {
-            startActivity(new Intent(what_to_do_C.this, what_to_do.class));
-        });
+        goToAlgo.setOnClickListener(v ->
+                startActivity(new Intent(what_to_do_C.this, what_to_do.class))
+        );
     }
 
     private void setupCCoursesMixed(List<CourseItem> list) {
-        // Course 1
+
+        // ---- COURSE 1 + QUIZ C1 ----
         list.add(new CourseItem("Introduction to C", getString(R.string.cours1_C)));
-        // Quiz C1 (original)
+
         list.add(new CourseItem("Quiz C1",
                 "Why is C a popular programming language?",
                 "A. It is slow but easy to use",
@@ -74,13 +74,15 @@ public class what_to_do_C extends AppCompatActivity {
                 "C. It cannot be used for software development",
                 "D. It only works on Windows",
                 "B. It is close to the hardware, fast, and efficient",
-                "Incorrect.",
+                "No. C is known for speed and efficiency, not slowness.",
                 "Correct!",
-                "Incorrect.",
-                "Incorrect."));
-        // Course 2
+                "No. C is widely used to develop all kinds of software.",
+                "No. C works on all major operating systems."
+        ));
+
+        // ---- COURSE 2 + QUIZ C2 ----
         list.add(new CourseItem("Installing and Using a C Compiler", getString(R.string.cours2_C)));
-        // Quiz C2 (original)
+
         list.add(new CourseItem("Quiz C2",
                 "What is the role of a C compiler?",
                 "A. It writes code for you automatically",
@@ -88,13 +90,15 @@ public class what_to_do_C extends AppCompatActivity {
                 "C. It stores variables in memory",
                 "D. It checks the internet for solutions",
                 "B. It translates your C code into a program your computer can run",
-                "Incorrect.",
+                "No. A compiler does not generate code on its own.",
                 "Correct!",
-                "Incorrect.",
-                "Incorrect."));
-        // Course 3
+                "No. Memory storage happens during execution.",
+                "No. A compiler never accesses the internet."
+        ));
+
+        // ---- COURSE 3 + QUIZ C3 ----
         list.add(new CourseItem("Structure of a C Program", getString(R.string.cours3_C)));
-        // Quiz C3 - small example
+
         list.add(new CourseItem("Quiz C3",
                 "What is the main function in a C program?",
                 "A. A section to store variables only",
@@ -102,13 +106,15 @@ public class what_to_do_C extends AppCompatActivity {
                 "C. A loop that repeats instructions",
                 "D. A library that prints text",
                 "B. The entry point where program execution starts",
-                "Incorrect.",
+                "No. Variables can be declared anywhere.",
                 "Correct!",
-                "Incorrect.",
-                "Incorrect."));
-        // Course 4
+                "No. The main function is not a loop.",
+                "No. Libraries are separate from main."
+        ));
+
+        // ---- COURSE 4 + QUIZ C4 ----
         list.add(new CourseItem("Variables in C", getString(R.string.cours4_C)));
-        // Quiz C4
+
         list.add(new CourseItem("Quiz C4",
                 "What is true about variables in C?",
                 "A. They store information and can change during program execution",
@@ -117,26 +123,30 @@ public class what_to_do_C extends AppCompatActivity {
                 "D. They are loops that repeat instructions",
                 "A. They store information and can change during program execution",
                 "Correct!",
-                "Incorrect.",
-                "Incorrect.",
-                "Incorrect."));
-        // Course 5
+                "No. Variables can change unless constant.",
+                "No. Variables store any type of data.",
+                "No. Variables are not control structures."
+        ));
+
+        // ---- COURSE 5 + QUIZ C5 ----
         list.add(new CourseItem("Data Types in C", getString(R.string.cours5_C)));
-        // Quiz C5
+
         list.add(new CourseItem("Quiz C5",
                 "What is the purpose of data types in C?",
-                "A. To tell the computer how much memory a variable needs, what type of value it stores, and allowed operations",
+                "A. To tell the computer how much memory a variable needs…",
                 "B. To make programs run without a compiler",
-                "C. To store multiple values in one variable automatically",
+                "C. To store multiple values automatically",
                 "D. To create new operators",
-                "A. To tell the computer how much memory a variable needs, what type of value it stores, and allowed operations",
+                "A. To tell the computer how much memory a variable needs…",
                 "Correct!",
-                "Incorrect.",
-                "Incorrect.",
-                "Incorrect."));
-        // Course 6
+                "No. Programs still need a compiler.",
+                "No. Only arrays or structs store multiple values.",
+                "No. Operators are predefined."
+        ));
+
+        // ---- COURSE 6 + QUIZ C6 ----
         list.add(new CourseItem("Operators in C", getString(R.string.cours6_C)));
-        // Quiz C6
+
         list.add(new CourseItem("Quiz C6",
                 "What does the modulo operator (%) return?",
                 "A. The opposite of a number",
@@ -144,163 +154,186 @@ public class what_to_do_C extends AppCompatActivity {
                 "C. The result of addition",
                 "D. The number of variables",
                 "B. The remainder of a division",
-                "Incorrect.",
+                "No. % does not invert values.",
                 "Correct!",
-                "Incorrect.",
-                "Incorrect."));
-        // Course 7
+                "No. + is addition.",
+                "No. % is unrelated to counting."
+        ));
+
+        // ---- COURSE 7 + QUIZ C7 ----
         list.add(new CourseItem("Input and Output", getString(R.string.cours7_C)));
-        // Quiz C7
+
         list.add(new CourseItem("Quiz C7",
-                "What does the scanf function do?",
-                "A. Displays text on the screen",
+                "What does scanf do?",
+                "A. Displays text",
                 "B. Reads a value entered by the user",
                 "C. Performs calculations",
                 "D. Stops the program",
                 "B. Reads a value entered by the user",
-                "Incorrect.",
+                "No. printf displays text.",
                 "Correct!",
-                "Incorrect.",
-                "Incorrect."));
-        // Course 8
+                "No. scanf only reads.",
+                "No. scanf does not stop execution."
+        ));
+
+        // ---- COURSE 8 + QUIZ C8 ----
         list.add(new CourseItem("IF / ELSE Conditions", getString(R.string.cours8_C)));
-        // Quiz C8
+
         list.add(new CourseItem("Quiz C8",
                 "What is the purpose of IF / ELSE?",
-                "A. To repeat actions many times",
-                "B. To store multiple values",
-                "C. To choose between two or more actions based on a condition",
+                "A. To repeat actions",
+                "B. To store values",
+                "C. To choose between actions based on a condition",
                 "D. To declare variables",
-                "C. To choose between two or more actions based on a condition",
-                "Incorrect.",
+                "C. To choose between actions based on a condition",
+                "No. Repetition uses loops.",
                 "Correct!",
-                "Incorrect.",
-                "Incorrect."));
-        // Course 9
+                "No. IF/ELSE does not store anything.",
+                "No. Variables require type declaration."
+        ));
+
+        // ---- COURSE 9 + QUIZ C9 ----
         list.add(new CourseItem("SWITCH / CASE", getString(R.string.cours9_C)));
-        // Quiz C9
+
         list.add(new CourseItem("Quiz C9",
                 "When should you use SWITCH / CASE?",
-                "A. When choosing between many options based on a single variable",
-                "B. When you want to repeat code multiple times",
-                "C. When storing many numbers",
-                "D. When comparing two variables only",
-                "A. When choosing between many options based on a single variable",
-                "Incorrect.",
+                "A. For choosing between many options based on one variable",
+                "B. To repeat code",
+                "C. To store many numbers",
+                "D. To compare only two variables",
+                "A. For choosing between many options…",
+                "No. SWITCH is not a loop.",
                 "Correct!",
-                "Incorrect.",
-                "Incorrect."));
-        // Course 10
+                "No. Arrays store numbers.",
+                "No. SWITCH is for more than two choices."
+        ));
+
+        // ---- COURSE 10 + QUIZ C10 ----
         list.add(new CourseItem("FOR Loop", getString(R.string.cours10_C)));
-        // Quiz C10
+
         list.add(new CourseItem("Quiz C10",
                 "When do we use a FOR loop?",
-                "A. When we want to repeat an action a fixed number of times",
-                "B. When we want to run a loop only once",
-                "C. When we want to choose between options",
-                "D. When reading input from the user only",
-                "A. When we want to repeat an action a fixed number of times",
+                "A. When repeating a fixed number of times",
+                "B. When running once",
+                "C. When choosing options",
+                "D. When reading input",
+                "A. When repeating a fixed number of times",
                 "Correct!",
-                "Incorrect.",
-                "Incorrect.",
-                "Incorrect."));
-        // Course 11
+                "No. No loop is needed for one execution.",
+                "No. Choices use IF/ELSE or SWITCH.",
+                "No. scanf reads input."
+        ));
+
+        // ---- COURSE 11 + QUIZ C11 ----
         list.add(new CourseItem("WHILE Loop", getString(R.string.cours11_C)));
-        // Quiz C11
+
         list.add(new CourseItem("Quiz C11",
                 "What is the key feature of a WHILE loop?",
-                "A. Repeats actions as long as the condition is true",
-                "B. Always runs exactly once",
+                "A. Repeats as long as condition is true",
+                "B. Always runs once",
                 "C. Declares variables automatically",
                 "D. Sorts numbers",
-                "A. Repeats actions as long as the condition is true",
+                "A. Repeats as long as condition is true",
                 "Correct!",
-                "Incorrect.",
-                "Incorrect.",
-                "Incorrect."));
-        // Course 12
+                "No. WHILE may run zero times.",
+                "No. You must declare variables manually.",
+                "No. Sorting is unrelated."
+        ));
+
+        // ---- COURSE 12 + QUIZ C12 ----
         list.add(new CourseItem("DO…WHILE Loop", getString(R.string.cours12_C)));
-        // Quiz C12
+
         list.add(new CourseItem("Quiz C12",
-                "What is special about a DO…WHILE loop?",
+                "What is special about DO…WHILE?",
                 "A. It never stops",
-                "B. It always runs at least once before checking the condition",
-                "C. It checks the condition before running",
-                "D. It can only work with numbers",
-                "B. It always runs at least once before checking the condition",
-                "Incorrect.",
+                "B. It always runs at least once",
+                "C. It checks condition before running",
+                "D. It works only with numbers",
+                "B. It always runs at least once",
+                "No. It will stop with a false condition.",
                 "Correct!",
-                "Incorrect.",
-                "Incorrect."));
-        // Course 13
+                "No. DO…WHILE checks after running.",
+                "No. It works with all instructions."
+        ));
+
+        // ---- COURSE 13 + QUIZ C13 ----
         list.add(new CourseItem("Arrays", getString(R.string.cours13_C)));
-        // Quiz C13
+
         list.add(new CourseItem("Quiz C13",
-                "What is an array in C?",
-                "A. A single number stored in memory",
-                "B. A structure that stores multiple values of the same type",
-                "C. A loop that repeats instructions",
-                "D. A variable that stores text only",
-                "B. A structure that stores multiple values of the same type",
-                "Incorrect.",
+                "What is an array?",
+                "A. A single number",
+                "B. A structure storing multiple values of the same type",
+                "C. A loop",
+                "D. A variable storing only text",
+                "B. A structure storing multiple values",
+                "No. That is a simple variable.",
                 "Correct!",
-                "Incorrect.",
-                "Incorrect."));
-        // Course 14
+                "No. A loop does not store values.",
+                "No. Arrays store many types."
+        ));
+
+        // ---- COURSE 14 + QUIZ C14 ----
         list.add(new CourseItem("Introduction to Pointers", getString(R.string.cours14_C)));
-        // Quiz C14
+
         list.add(new CourseItem("Quiz C14",
                 "What does a pointer store?",
-                "A. A true/false value",
+                "A. True/false value",
                 "B. A text string",
-                "C. The address of another variable in memory",
+                "C. The address of another variable",
                 "D. A number only",
-                "C. The address of another variable in memory",
-                "Incorrect.",
+                "C. The address of another variable",
+                "No. That is a boolean.",
+                "No. Strings are in char arrays.",
                 "Correct!",
-                "Incorrect.",
-                "Incorrect."));
-        // Course 15
+                "No. Pointers store addresses."
+        ));
+
+        // ---- COURSE 15 + QUIZ C15 ----
         list.add(new CourseItem("Structures", getString(R.string.cours15_C)));
-        // Quiz C15
+
         list.add(new CourseItem("Quiz C15",
-                "What is a structure (record) in C?",
-                "A. A variable that stores only integers",
-                "B. A data type that groups different variables together",
-                "C. A loop that repeats instructions",
-                "D. A pointer to a variable",
-                "B. A data type that groups different variables together",
-                "Incorrect.",
+                "What is a structure in C?",
+                "A. A variable storing only integers",
+                "B. A data type that groups different variables",
+                "C. A loop",
+                "D. A pointer",
+                "B. A data type that groups different variables",
+                "No. Structures store many types.",
                 "Correct!",
-                "Incorrect.",
-                "Incorrect."));
-        // Course 16
+                "No. That is a loop.",
+                "No. A structure is not a pointer."
+        ));
+
+        // ---- COURSE 16 + QUIZ C16 ----
         list.add(new CourseItem("Linked Lists", getString(R.string.cours16_C)));
-        // Quiz C16
+
         list.add(new CourseItem("Quiz C16",
                 "What is a linked list?",
                 "A. A static array",
-                "B. A structure where each element contains a value and a pointer to the next",
-                "C. A loop that repeats several actions",
-                "D. A function that returns numbers",
-                "B. A structure where each element contains a value and a pointer to the next",
-                "Incorrect.",
+                "B. A structure where each element has a value and a pointer to the next",
+                "C. A loop",
+                "D. A function",
+                "B. A structure with value + pointer",
+                "No. Arrays cannot grow.",
                 "Correct!",
-                "Incorrect.",
-                "Incorrect."));
-        // Course 17
+                "No. It is a data structure.",
+                "No. Not a function."
+        ));
+
+        // ---- COURSE 17 + QUIZ C17 ----
         list.add(new CourseItem("Functions and Procedures", getString(R.string.cours17_C)));
-        // Quiz C17
+
         list.add(new CourseItem("Quiz C17",
-                "What is a subprogram in C?",
-                "A. A small part of a program that performs a specific task",
-                "B. A variable that stores many values",
+                "What is a subprogram?",
+                "A. A small part that performs a specific task",
+                "B. A variable storing many values",
                 "C. A loop that never ends",
                 "D. A list of random steps",
-                "A. A small part of a program that performs a specific task",
-                "Incorrect.",
+                "A. Performs a specific task",
                 "Correct!",
-                "Incorrect.",
-                "Incorrect."));
+                "No. Variables store data.",
+                "No. Infinite loops are errors.",
+                "No. Subprograms are not random."
+        ));
     }
 }

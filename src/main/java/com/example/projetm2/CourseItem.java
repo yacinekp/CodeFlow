@@ -1,7 +1,11 @@
 package com.example.projetm2;
 
 public class CourseItem {
+
+    // Type of item
     private boolean isQuiz;
+
+    // Common fields
     private String title;
 
     // Lesson content
@@ -13,34 +17,43 @@ public class CourseItem {
     private String correct;
     private String c1, c2, c3, c4;
 
-    // Lesson constructor
+    // ----------- LESSON CONSTRUCTOR ----------- //
     public CourseItem(String title, String content) {
         this.title = title;
         this.content = content;
         this.isQuiz = false;
     }
 
-    // Quiz constructor
+    // ----------- QUIZ CONSTRUCTOR ----------- //
     public CourseItem(String title,
                       String question,
                       String p1, String p2, String p3, String p4,
                       String correct,
                       String c1, String c2, String c3, String c4) {
+
         this.title = title;
         this.question = question;
-        this.p1 = p1; this.p2 = p2; this.p3 = p3; this.p4 = p4;
+        this.p1 = p1;
+        this.p2 = p2;
+        this.p3 = p3;
+        this.p4 = p4;
         this.correct = correct;
-        this.c1 = c1; this.c2 = c2; this.c3 = c3; this.c4 = c4;
+        this.c1 = c1;
+        this.c2 = c2;
+        this.c3 = c3;
+        this.c4 = c4;
         this.isQuiz = true;
     }
+
+    // ---------- GETTERS ---------- //
 
     public boolean isQuiz() { return isQuiz; }
     public String getTitle() { return title; }
 
-    // Lesson getters
+    // Lesson
     public String getContent() { return content; }
 
-    // Quiz getters
+    // Quiz
     public String getQuestion() { return question; }
     public String getP1() { return p1; }
     public String getP2() { return p2; }

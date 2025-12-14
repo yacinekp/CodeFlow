@@ -3660,6 +3660,9 @@ id BOTTOM_START
 id BottomNote
 id CTRL
 id CourseContent
+id CreateAccountConfirmPassword
+id CreateAccountEmail
+id CreateAccountPassword
 id CreateAccountUserName
 id FUNCTION
 id META
@@ -3768,8 +3771,6 @@ id btnC_Language
 id btnCourse
 id btnCreate
 id btnCreateAccount
-id btnCreateAccountConfirmPassword
-id btnCreateAccountPassword
 id btnForgotPassword
 id btnGoToAlgo
 id btnGoToC
@@ -3959,7 +3960,6 @@ id italic
 id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart
-id labelEmail
 id labelPassword
 id labeled
 id layout
